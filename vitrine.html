@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Demonstração de Vitrine</title>
+  <meta name="description" content="Vitrine online da Tropical Sorvetes — confira nosso catálogo de sorvetes, picolés e açaí.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Tropical Sorvetes">
+  <meta name="theme-color" content="#24140A">
+
+  <link rel="icon" type="image/png" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --dark:        #24140A;
+      --dark-2:      #331C0E;
+      --orange:      #F2760C;
+      --orange-dark: #C2590A;
+      --gold:        #FFC736;
+      --gray-900:    #2B1D12;
+      --white:       #FFFFFF;
+      --text:        #2B1D12;
+      --header-h:    80px;
+    }
+
+    html, body { height: 100%; overflow: hidden; -webkit-text-size-adjust: 100%; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); }
+    a { text-decoration: none; color: inherit; -webkit-tap-highlight-color: transparent; }
+    button { -webkit-tap-highlight-color: transparent; touch-action: manipulation; cursor: pointer; background: none; border: none; font-family: inherit; }
+    img { max-width: 100%; display: block; }
+
+    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── HEADER (padrão do site, 80px) ── */
+    #header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; height: var(--header-h); background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(43,29,18,0.08); box-shadow: 0 4px 20px rgba(43,29,18,0.10); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; height: 100%; gap: 16px; }
+
+    .logo-link { display: flex; align-items: center; }
+    .logo-link:hover { transform: scale(1.04); }
+    .logo-link img { height: 52px; width: auto; object-fit: contain; }
+
+    nav { display: flex; align-items: center; gap: 2px; }
+    nav a {
+      position: relative; font-size: 0.875rem; font-weight: 500; color: var(--gray-900);
+      padding: 8px 13px; border-radius: 7px; transition: color 0.2s, background 0.2s; white-space: nowrap;
+    }
+    nav a:hover { color: var(--orange-dark); background: rgba(242,118,12,0.08); }
+    nav a:not(.btn-nav)::after {
+      content: ''; position: absolute; left: 13px; right: 13px; bottom: 4px;
+      height: 2px; background: var(--orange); border-radius: 2px;
+      transform: scaleX(0); transform-origin: center; transition: transform 0.28s cubic-bezier(0.22,1,0.36,1);
+    }
+    nav a:not(.btn-nav):hover::after { transform: scaleX(1); }
+    nav a.nav-active:not(.btn-nav)::after { transform: scaleX(1); }
+
+    .btn-nav {
+      background: var(--orange); color: var(--white) !important; padding: 9px 20px;
+      border-radius: 50px; font-weight: 600; font-size: 0.875rem;
+      transition: background 0.2s, transform 0.15s !important;
+    }
+    .btn-nav:hover { background: var(--orange-dark); color: var(--white) !important; transform: translateY(-1px); }
+
+    .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; }
+    .menu-toggle span { display: block; width: 24px; height: 2px; background: var(--gray-900); border-radius: 2px; transition: transform .3s, opacity .3s; }
+    .menu-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .menu-toggle.open span:nth-child(2) { opacity: 0; }
+    .menu-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-nav { display: none; position: fixed; top: var(--header-h); left: 0; right: 0; background: var(--white); border-bottom: 1px solid rgba(43,29,18,0.1); box-shadow: 0 12px 24px rgba(43,29,18,0.12); z-index: 999; flex-direction: column; padding: 10px 0; max-height: calc(100vh - var(--header-h)); overflow-y: auto; }
+    .mobile-nav.open { display: flex; }
+    .mobile-link { padding: 13px 24px; font-size: 0.95rem; font-weight: 600; color: var(--gray-900); border-bottom: 1px solid rgba(43,29,18,0.06); }
+    .mobile-link:hover { color: var(--orange-dark); background: rgba(242,118,12,0.06); }
+
+    /* ── VITRINE (iframe ocupa o espaço restante) ── */
+    main { position: fixed; top: var(--header-h); left: 0; right: 0; bottom: 0; width: 100%; }
+    #vitrineFrame { display: block; width: 100%; height: calc(100vh - 80px); border: none; }
+
+    @media (max-width: 900px) {
+      nav > a:not(.btn-nav) { display: none; }
+      .menu-toggle { display: flex; }
+    }
+
+    @media (max-width: 640px) {
+      .logo-link img { height: 44px; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ══ HEADER ══ -->
+  <header id="header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link" aria-label="Tropical Sorvetes — página inicial">
+        <img src="logo.png" alt="Tropical Sorvetes">
+      </a>
+      <nav aria-label="Menu principal">
+        <a href="index.html#inicio">Início</a>
+        <a href="index.html#sobre">Sobre</a>
+        <a href="index.html#produtos">Produtos</a>
+        <a href="index.html#sabores">Sabores</a>
+        <a href="index.html#diferenciais">Diferenciais</a>
+        <a href="index.html#contato">Contato</a>
+        <a href="https://wa.me/5588999999999" class="btn-nav" target="_blank" rel="noopener noreferrer">Fale conosco</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MENU MOBILE -->
+  <div class="mobile-nav" id="mobileNav" aria-label="Menu mobile">
+    <a href="index.html#inicio" class="mobile-link">Início</a>
+    <a href="index.html#sobre" class="mobile-link">Sobre</a>
+    <a href="index.html#produtos" class="mobile-link">Produtos</a>
+    <a href="index.html#sabores" class="mobile-link">Sabores</a>
+    <a href="index.html#diferenciais" class="mobile-link">Diferenciais</a>
+    <a href="index.html#contato" class="mobile-link">Contato</a>
+    <a href="https://wa.me/5588999999999" class="btn-nav mobile-link" target="_blank" rel="noopener noreferrer">Fale conosco</a>
+  </div>
+
+  <!-- ══ VITRINE ══ -->
+  <main>
+    <iframe id="vitrineFrame" src="https://ramonlopes10.egestor.com.br/vitrine/" style="width:100%; height:800px; border:none;" title="Vitrine online da Tropical Sorvetes"></iframe>
+  </main>
+
+  <script>
+    /* ── ALTURA DINÂMICA DO IFRAME: 100vh - 80px (header) - 0 (sem badge) ── */
+    var frame = document.getElementById('vitrineFrame');
+    var headerH = 80;
+    function resizeFrame() {
+      frame.style.height = (window.innerHeight - headerH) + 'px';
+    }
+    window.addEventListener('resize', resizeFrame);
+    window.addEventListener('orientationchange', resizeFrame);
+    resizeFrame();
+
+    /* ── MENU MOBILE ── */
+    var menuToggle = document.getElementById('menuToggle');
+    var mobileNav = document.getElementById('mobileNav');
+    menuToggle.addEventListener('click', function() {
+      var isOpen = mobileNav.classList.toggle('open');
+      menuToggle.classList.toggle('open', isOpen);
+      menuToggle.setAttribute('aria-expanded', isOpen);
+    });
+    mobileNav.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        mobileNav.classList.remove('open');
+        menuToggle.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>
