@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Tropical Sorvetes</title>
-  <meta name="description" content="Sorvetes, picolés e açaí de tradição há mais de 30 anos no Vale do Acaraú. Direto de fábrica para sua família e parceria de qualidade para o seu comércio em Marco/CE.">
-  <meta name="keywords" content="sorveteria Marco CE, distribuidora de sorvetes Ceará, picolé Vale do Acaraú, açaí Marco CE, revenda de sorvetes, freezer exclusivo sorvete, Tropical Sorvetes">
+  <meta name="description" content="Sorvetes, picolés e açaí de tradição há mais de 30 anos no Vale do Acaraú e região. Direto de fábrica para sua família e parceria de qualidade para o seu comércio em Marco/CE.">
+  <meta name="keywords" content="sorveteria Marco CE, distribuidora de sorvetes Ceará, picolé Vale do Acaraú, açaí Marco CE, revenda de sorvetes, freezer exclusivo sorvete, Tropical Sorvetes, Vale do Acaraú e região">
   <meta name="author" content="Tropical Sorvetes">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <meta name="theme-color" content="#F2760C">
@@ -18,7 +18,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.tropicalsorvetes.com.br/">
   <meta property="og:site_name" content="Tropical Sorvetes">
-  <meta property="og:title" content="Tropical Sorvetes | Tradição de mais de 30 anos no Vale do Acaraú">
+  <meta property="og:title" content="Tropical Sorvetes | Tradição de mais de 30 anos no Vale do Acaraú e região">
   <meta property="og:description" content="Sorvetes, picolés e açaí direto de fábrica para sua família e parceria de qualidade para o seu comércio em Marco/CE.">
   <meta property="og:image" content="https://www.tropicalsorvetes.com.br/favicon-512.png">
   <meta property="og:image:width" content="512">
@@ -26,7 +26,7 @@
   <meta property="og:locale" content="pt_BR">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Tropical Sorvetes | Tradição de mais de 30 anos no Vale do Acaraú">
+  <meta name="twitter:title" content="Tropical Sorvetes | Tradição de mais de 30 anos no Vale do Acaraú e região">
   <meta name="twitter:description" content="Sorvetes, picolés e açaí direto de fábrica para sua família e parceria de qualidade para o seu comércio em Marco/CE.">
   <meta name="twitter:image" content="https://www.tropicalsorvetes.com.br/favicon-512.png">
 
@@ -43,7 +43,7 @@
         "@type": ["IceCreamShop", "Store"],
         "@id": "https://www.tropicalsorvetes.com.br/#empresa",
         "name": "Tropical Sorvetes",
-        "description": "Fábrica de sorvetes, picolés e açaí com mais de 30 anos de tradição no Vale do Acaraú, atendendo famílias e revendedores em Marco/CE e região.",
+        "description": "Fábrica de sorvetes, picolés e açaí com mais de 30 anos de tradição no Vale do Acaraú e região, atendendo famílias e revendedores em Marco/CE.",
         "url": "https://www.tropicalsorvetes.com.br/",
         "logo": "https://www.tropicalsorvetes.com.br/favicon-512.png",
         "image": "https://www.tropicalsorvetes.com.br/favicon-512.png",
@@ -90,18 +90,18 @@
       --dark:        #24140A;
       --dark-2:      #331C0E;
       --dark-3:      #452510;
-      --orange:      #F2760C;
-      --orange-dark: #C2590A;
-      --orange-light:#FF9D4D;
+      --orange:      #F0812E;
+      --orange-dark: #C0611F;
+      --orange-light:#FDA86F;
       --gold:        #FFC736;
       --gold-dark:   #E0A400;
       --gray-900:    #2B1D12;
       --gray-800:    #4A3826;
       --gray-600:    #7A6650;
       --gray-400:    #A8917A;
-      --gray-200:    #F0E4D4;
-      --gray-100:    #FAF3E9;
-      --gray-50:     #FDFAF5;
+      --gray-200:    #FFD9A8;
+      --gray-100:    #FFE9CE;
+      --gray-50:     #FFF3E6;
       --white:       #FFFFFF;
       --text:        #2B1D12;
       --text-light:  #7A6650;
@@ -111,7 +111,7 @@
     body {
       font-family: 'Inter', sans-serif;
       color: var(--text);
-      background: var(--white);
+      background: var(--gray-50);
       overflow-x: hidden;
       line-height: 1.6;
       opacity: 0;
@@ -135,7 +135,7 @@
     /* ===== HEADER ===== */
     header {
       position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      background: rgba(255,255,255,0.95);
+      background: rgba(255,243,230,0.95);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(43,29,18,0.08);
@@ -159,7 +159,7 @@
       padding: 8px 13px; border-radius: 7px;
       transition: color 0.2s, background 0.2s; white-space: nowrap;
     }
-    nav a:hover { color: var(--orange-dark); background: rgba(242,118,12,0.08); }
+    nav a:hover { color: var(--orange-dark); background: rgba(240,129,46,0.08); }
     nav a:not(.btn-nav)::after {
       content: ''; position: absolute; left: 13px; right: 13px; bottom: 4px;
       height: 2px; background: var(--orange); border-radius: 2px;
@@ -198,7 +198,7 @@
 
     .mobile-nav {
       display: none; position: fixed; top: 88px; left: 0; right: 0;
-      background: var(--white); padding: 16px 24px 24px;
+      background: var(--gray-50); padding: 16px 24px 24px;
       border-bottom: 1px solid var(--gray-200);
       box-shadow: 0 8px 24px rgba(43,29,18,0.09); z-index: 999;
     }
@@ -224,9 +224,9 @@
     .hero::before {
       content: ''; position: absolute; inset: 0;
       background: linear-gradient(135deg,
-        rgba(20,10,4,0.94) 0%,
-        rgba(36,20,10,0.90) 45%,
-        rgba(242,118,12,0.40) 100%);
+        rgba(20,10,4,0.90) 0%,
+        rgba(58,26,6,0.85) 45%,
+        rgba(240,129,46,0.62) 100%);
       z-index: 0;
     }
     #hero-canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
@@ -242,7 +242,7 @@
     }
     .hero-aurora-2 {
       width: 420px; height: 420px; bottom: -140px; left: -100px;
-      background: radial-gradient(circle, rgba(242,118,12,0.38), transparent 70%);
+      background: radial-gradient(circle, rgba(240,129,46,0.38), transparent 70%);
       animation: auroraDrift2 20s ease-in-out infinite;
     }
     @media (max-width: 768px) { .hero-aurora { opacity: 0.32; } }
@@ -250,7 +250,7 @@
     .hero-spotlight {
       position: absolute; top: 0; left: 0; z-index: 0;
       width: 460px; height: 460px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(255,199,54,0.18), rgba(242,118,12,0.08) 55%, transparent 75%);
+      background: radial-gradient(circle, rgba(255,199,54,0.18), rgba(240,129,46,0.08) 55%, transparent 75%);
       transform: translate(-50%, -50%); pointer-events: none;
       opacity: 0; transition: opacity 0.4s ease; will-change: transform;
     }
@@ -323,7 +323,7 @@
     .section-tag {
       display: block; width: max-content; font-size: 0.72rem; font-weight: 700;
       letter-spacing: 0.10em; text-transform: uppercase;
-      color: var(--orange-dark); background: rgba(242,118,12,0.08);
+      color: var(--orange-dark); background: rgba(240,129,46,0.08);
       padding: 5px 14px; border-radius: 50px; margin-bottom: 14px;
     }
     .section-header.center .section-tag { margin-left: auto; margin-right: auto; }
@@ -365,7 +365,7 @@
     .number-label { font-size: 0.85rem; color: rgba(255,255,255,0.65); margin-top: 8px; }
 
     /* ===== SOBRE ===== */
-    .sobre { background: var(--white); }
+    .sobre { background: var(--gray-50); }
     .sobre-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
 
     .sobre-img-wrap { position: relative; border-radius: 20px; overflow: hidden; background: var(--gray-100); }
@@ -393,7 +393,7 @@
     }
     .mercado::before {
       content: ''; position: absolute; inset: 0;
-      background: rgba(253,250,245,0.87); z-index: 0;
+      background: rgba(255,222,186,0.90); z-index: 0;
     }
     .mercado .container { position: relative; z-index: 1; }
     .mercado-text .section-subtitle { max-width: 760px; margin-bottom: 14px; }
@@ -405,7 +405,7 @@
       font-size: 0.85rem; font-weight: 600; color: var(--dark);
       transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease;
     }
-    .mercado-tag:hover { border-color: var(--orange); background: rgba(242,118,12,0.06); transform: translateY(-2px); }
+    .mercado-tag:hover { border-color: var(--orange); background: rgba(240,129,46,0.06); transform: translateY(-2px); }
     .mercado-tag svg { width: 15px; height: 15px; color: var(--orange); flex-shrink: 0; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
 
     /* ===== MISSÃO, VISÃO E VALORES ===== */
@@ -472,7 +472,7 @@
     }
     .diferenciais::before {
       content: ''; position: absolute; inset: 0;
-      background: rgba(253,250,245,0.88); z-index: 0;
+      background: rgba(255,222,186,0.90); z-index: 0;
     }
     .diferenciais .container { position: relative; z-index: 1; }
     .diff-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -490,12 +490,12 @@
       background: linear-gradient(115deg, transparent, rgba(255,199,54,0.10), transparent);
       transform: skewX(-18deg); pointer-events: none;
     }
-    .diff-card:hover { border-color: var(--orange); box-shadow: 0 8px 28px rgba(242,118,12,0.16); transform: translateY(-2px); }
+    .diff-card:hover { border-color: var(--orange); box-shadow: 0 8px 28px rgba(240,129,46,0.16); transform: translateY(-2px); }
     .diff-card:hover::after { animation: shimmer 0.55s ease forwards; }
 
     .diff-icon {
       flex-shrink: 0; width: 46px; height: 46px; border-radius: 14px;
-      background: rgba(242,118,12,0.08); display: flex; align-items: center; justify-content: center;
+      background: rgba(240,129,46,0.08); display: flex; align-items: center; justify-content: center;
       transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background 0.3s;
     }
     .diff-card:hover .diff-icon { transform: rotate(-8deg) scale(1.08); background: var(--orange); }
@@ -578,7 +578,7 @@
     }
     .sabores::before {
       content: ''; position: absolute; inset: 0;
-      background: rgba(253,250,245,0.90); z-index: 0;
+      background: rgba(255,222,186,0.92); z-index: 0;
     }
     .sabores .container { position: relative; z-index: 1; }
     .sabores-float { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
@@ -605,6 +605,82 @@
     .sabor-tag:hover { border-color: var(--orange); background: var(--orange); color: var(--white); transform: translateY(-2px); }
     .sabores-note { text-align: center; margin-top: 30px; font-size: 0.92rem; color: var(--text-light); }
     .sabores-note strong { color: var(--orange-dark); }
+
+    /* ===== GALERIA ===== */
+    .galeria { background: var(--dark); }
+    .galeria .section-tag { background: rgba(255,255,255,0.12); color: var(--gold); }
+    .galeria .section-title { color: var(--white); }
+    .galeria .section-subtitle { color: rgba(255,255,255,0.72); }
+
+    .galeria-grid {
+      display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px;
+    }
+    .galeria-item {
+      position: relative; aspect-ratio: 1 / 1; border-radius: 14px; overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.10); background: rgba(255,255,255,0.04);
+      cursor: pointer; padding: 0;
+      transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .galeria-item img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      transition: transform 0.5s cubic-bezier(0.22,1,0.36,1);
+    }
+    .galeria-item::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(22,12,6,0.55) 0%, transparent 45%);
+      opacity: 0; transition: opacity 0.3s ease;
+    }
+    .galeria-item::before {
+      content: ''; position: absolute; z-index: 1; top: 50%; left: 50%;
+      width: 34px; height: 34px; border-radius: 50%;
+      background: rgba(255,255,255,0.16) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3Cline x1='11' y1='8' x2='11' y2='14'/%3E%3Cline x1='8' y1='11' x2='14' y2='11'/%3E%3C/svg%3E") center/16px no-repeat;
+      backdrop-filter: blur(2px);
+      transform: translate(-50%, -50%) scale(0.6); opacity: 0;
+      transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), opacity 0.3s ease;
+    }
+    .galeria-item:hover { border-color: var(--orange); box-shadow: 0 10px 26px rgba(0,0,0,0.35); transform: translateY(-3px); }
+    .galeria-item:hover img { transform: scale(1.10); }
+    .galeria-item:hover::after,
+    .galeria-item:hover::before { opacity: 1; }
+    .galeria-item:hover::before { transform: translate(-50%, -50%) scale(1); }
+    .galeria-item:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed; inset: 0; z-index: 9999;
+      background: rgba(10,6,3,0.94);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; visibility: hidden; transition: opacity 0.25s ease;
+    }
+    .lightbox.open { opacity: 1; visibility: visible; }
+    .lightbox-figure { max-width: min(90vw, 900px); max-height: 88vh; text-align: center; }
+    .lightbox-figure img {
+      max-width: 100%; max-height: 78vh; border-radius: 12px; display: block; margin: 0 auto;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+    .lightbox-figure figcaption { color: rgba(255,255,255,0.85); font-size: 0.92rem; margin-top: 16px; }
+    .lightbox-btn {
+      position: absolute; display: flex; align-items: center; justify-content: center;
+      width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.25);
+      background: rgba(255,255,255,0.08); color: var(--white); cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+    }
+    .lightbox-btn:hover { background: var(--orange); border-color: var(--orange); transform: translateY(-1px); }
+    .lightbox-btn svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+    .lightbox-close { top: 24px; right: 24px; }
+    .lightbox-prev { left: 24px; top: 50%; transform: translateY(-50%); }
+    .lightbox-next { right: 24px; top: 50%; transform: translateY(-50%); }
+
+    @media (max-width: 900px) {
+      .galeria-grid { grid-template-columns: repeat(4, 1fr); gap: 10px; }
+      .lightbox-prev, .lightbox-next { width: 40px; height: 40px; }
+      .lightbox-prev { left: 10px; } .lightbox-next { right: 10px; }
+      .lightbox-close { top: 14px; right: 14px; }
+    }
+    @media (max-width: 560px) {
+      .galeria-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+      .galeria-item { border-radius: 10px; }
+    }
 
     /* ===== REVENDA / COMÉRCIO ===== */
     .revenda {
@@ -653,7 +729,7 @@
     }
     .vitrine-box::after {
       content: ''; position: absolute; top: -60px; right: -60px; width: 260px; height: 260px;
-      background: radial-gradient(circle, rgba(255,199,54,0.22) 0%, rgba(242,118,12,0.10) 55%, transparent 70%);
+      background: radial-gradient(circle, rgba(255,199,54,0.22) 0%, rgba(240,129,46,0.10) 55%, transparent 70%);
       border-radius: 50%; pointer-events: none;
     }
     .vitrine-img {
@@ -707,7 +783,7 @@
     }
     .contato::before {
       content: ''; position: absolute; inset: 0;
-      background: rgba(253,250,245,0.90); z-index: 0;
+      background: rgba(255,222,186,0.92); z-index: 0;
     }
     .contato .container { position: relative; z-index: 1; }
     .contato-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
@@ -718,7 +794,7 @@
 
     .contato-icon {
       flex-shrink: 0; width: 46px; height: 46px; border-radius: 14px;
-      background: rgba(242,118,12,0.08); display: flex; align-items: center; justify-content: center;
+      background: rgba(240,129,46,0.08); display: flex; align-items: center; justify-content: center;
       transition: background 0.25s ease, transform 0.25s ease;
     }
     .contato-item:hover .contato-icon { background: var(--orange); transform: scale(1.08) rotate(-6deg); }
@@ -738,7 +814,7 @@
     .mapa-wrap iframe { width: 100%; height: 100%; border: 0; display: block; }
 
     .contato-form {
-      background: var(--white); border-radius: 22px;
+      background: var(--gray-50); border-radius: 22px;
       padding: 40px 36px; border: 1px solid var(--gray-200);
     }
     .contato-form h3 {
@@ -761,7 +837,7 @@
     .form-group input:focus,
     .form-group select:focus,
     .form-group textarea:focus {
-      border-color: var(--orange); box-shadow: 0 0 0 3px rgba(242,118,12,0.12); transform: translateY(-2px);
+      border-color: var(--orange); box-shadow: 0 0 0 3px rgba(240,129,46,0.12); transform: translateY(-2px);
     }
     .form-group textarea { resize: vertical; min-height: 100px; }
 
@@ -861,7 +937,7 @@
     @keyframes auroraDrift2 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(25px,-25px) scale(1.1); } }
 
     nav a.nav-active:not(.btn-nav) { color: var(--orange-dark) !important; }
-    .mobile-nav a.nav-active:not(.btn-nav) { color: var(--orange-dark) !important; background: rgba(242,118,12,0.08); }
+    .mobile-nav a.nav-active:not(.btn-nav) { color: var(--orange-dark) !important; background: rgba(240,129,46,0.08); }
 
     .btn-ripple { position: relative; overflow: hidden; }
     .ripple-circle {
@@ -1109,6 +1185,7 @@
     <a href="#sobre" class="mobile-link">Sobre</a>
     <a href="#produtos" class="mobile-link">Produtos</a>
     <a href="#sabores" class="mobile-link">Sabores</a>
+    <a href="#galeria" class="mobile-link">Galeria</a>
     <a href="#diferenciais" class="mobile-link">Diferenciais</a>
     <a href="#contato" class="mobile-link">Contato</a>
     <a href="vitrine.html" class="btn-nav btn-nav-vitrine mobile-link">Vitrine</a>
@@ -1125,11 +1202,11 @@
       <div class="hero-content">
         <div class="hero-badge">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-          Mais de 30 anos no Vale do Acaraú
+          Mais de 30 anos no Vale do Acaraú e região
         </div>
         <h1>Tropical <span>Sorvetes</span></h1>
         <p class="hero-slogan">"O sabor que a sua família ama, a parceria que o seu comércio precisa."</p>
-        <h2>Sorvetes cremosos, picolés e açaí feitos com receita artesanal e estrutura fabril própria, levando refrescância para famílias e resultado para revendedores de todo o Vale do Acaraú, direto de Marco/CE.</h2>
+        <h2>Sorvetes cremosos, picolés e açaí feitos com receita própria e estrutura fabril própria, levando refrescância para famílias e resultado para revendedores de todo o Vale do Acaraú e região, direto de Marco/CE.</h2>
         <div class="hero-actions">
           <a href="https://wa.me/5588999999999" class="btn-primary" aria-label="Fale conosco via WhatsApp" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -1218,10 +1295,10 @@
             Há três décadas, a Tropical Sorvetes iniciava uma trajetória pautada pela dedicação, trabalho e pelo desejo de levar mais sabor e alegria às famílias da nossa região. O que começou com uma produção modesta e muita determinação hoje se transformou em uma estrutura fabril referência no setor de gelados.
           </p>
           <p class="section-subtitle" style="margin-top:14px;">
-            Ao longo de 30 anos de história, crescemos junto com a nossa comunidade no Vale do Acaraú, mantendo sempre o mesmo compromisso do primeiro dia: selecionar os melhores ingredientes para entregar um produto de altíssima qualidade e cremosidade incomparável.
+            Ao longo de 30 anos de história, crescemos junto com a nossa comunidade no Vale do Acaraú e região, mantendo sempre o mesmo compromisso do primeiro dia: selecionar os melhores ingredientes para entregar um produto de altíssima qualidade e cremosidade incomparável.
           </p>
           <p class="section-subtitle" style="margin-top:14px;">
-            Hoje contamos com um catálogo completo, dos clássicos picolés cremosos e crocantes a um buffet com dezenas de sabores exclusivos de sorvetes e açaí — combinando a modernização dos processos industriais ao carinho de uma receita que preserva a essência artesanal.
+            Hoje contamos com um catálogo completo, dos clássicos picolés cremosos e crocantes a um buffet com dezenas de sabores exclusivos de sorvetes e açaí — combinando a modernização dos processos industriais ao carinho de uma receita que preserva a essência tradicional da nossa fábrica.
           </p>
         </div>
       </div>
@@ -1235,7 +1312,7 @@
         <span class="section-tag">Mercado de atuação</span>
         <h2 class="section-title" id="mercado-title">Onde a Tropical Sorvetes <span>atua</span></h2>
         <p class="section-subtitle">
-          Líder em distribuição no atacado, a Tropical Sorvetes abastece a rede varejista do Vale do Acaraú com um portfólio de alta demanda, atendendo desde pequenos comércios a grandes redes, otimizando a exposição de produtos para garantir a máxima rentabilidade por metro quadrado.
+          Líder em distribuição no atacado, a Tropical Sorvetes abastece a rede varejista do Vale do Acaraú e região com um portfólio de alta demanda, atendendo desde pequenos comércios a grandes redes, otimizando a exposição de produtos para garantir a máxima rentabilidade por metro quadrado.
         </p>
         <p class="section-subtitle" style="margin-top:14px;">
           Oferecemos ao seu negócio um modelo completo de vendas: produtos com forte reconhecimento de marca, infraestrutura com freezers exclusivos e uma logística própria com pontualidade rigorosa no abastecimento.
@@ -1283,7 +1360,7 @@
             <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
           </div>
           <h4>Qualidade e tradição</h4>
-          <p>Seleção rigorosa dos melhores ingredientes e cuidado em cada etapa da produção, mantendo a essência do sabor artesanal.</p>
+          <p>Seleção rigorosa dos melhores ingredientes e cuidado em cada etapa da produção, mantendo a essência do sabor tradicional.</p>
         </div>
         <div class="valor-card">
           <div class="valor-icon">
@@ -1311,7 +1388,7 @@
             <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
           <h4>União e comunitariedade</h4>
-          <p>Orgulho de fazer parte da história do Vale do Acaraú e de estar presente nos momentos felizes das famílias da nossa terra.</p>
+          <p>Orgulho de fazer parte da história do Vale do Acaraú e região, e de estar presente nos momentos felizes das famílias da nossa terra.</p>
         </div>
       </div>
     </div>
@@ -1332,7 +1409,7 @@
           </div>
           <div class="diff-text">
             <h4>Mais de 30 anos de tradição</h4>
-            <p>Três décadas de história e confiança com as famílias do Vale do Acaraú.</p>
+            <p>Três décadas de história e confiança com as famílias do Vale do Acaraú e região.</p>
           </div>
         </div>
         <div class="diff-card">
@@ -1350,7 +1427,7 @@
           </div>
           <div class="diff-text">
             <h4>Estrutura fabril própria</h4>
-            <p>Processos industriais modernos com o carinho de uma receita artesanal.</p>
+            <p>Processos industriais modernos com o carinho de uma receita tradicional.</p>
           </div>
         </div>
         <div class="diff-card">
@@ -1390,13 +1467,13 @@
       <div class="section-header center">
         <span class="section-tag">O que oferecemos</span>
         <h2 class="section-title" id="produtos-title">Nossos <span>produtos</span></h2>
-        <p class="section-subtitle">Gelados para toda a família, com qualidade artesanal e opções para o seu comércio.</p>
+        <p class="section-subtitle">Gelados para toda a família, com qualidade de fábrica e opções para o seu comércio.</p>
       </div>
       <div class="produtos-grid">
 
         <div class="produto-card">
           <div class="produto-img-wrap">
-            <img src="assets/img/produtos/picole-variados.jpg" alt="Picolés Tropical Sorvetes: crocante, de fruta e moreninha de tapioca" loading="lazy">
+            <img src="assets/img/produtos/picole-variados.jpg" alt="Linha de picolés Crocante Tropical Sorvetes nos sabores morango, flocos, chocolate e leite condensado" loading="lazy">
           </div>
           <div class="produto-icon">
             <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
@@ -1407,7 +1484,7 @@
 
         <div class="produto-card">
           <div class="produto-img-wrap">
-            <img src="assets/img/produtos/sorvete-1l.jpg" alt="Pote de sorvete Tropical de 1 litro com sabores de creme, passas e flocos" loading="lazy">
+            <img src="assets/img/produtos/sorvete-1l.jpg" alt="Pote de sorvete Tropical de 1 litro sabor Flocos e Chocolate" loading="lazy">
           </div>
           <div class="produto-icon">
             <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
@@ -1418,7 +1495,7 @@
 
         <div class="produto-card">
           <div class="produto-img-wrap">
-            <img src="assets/img/produtos/sorvete-potes.jpg" alt="Copos de sorvete Tropical de 120ml, 240ml e sundae" loading="lazy">
+            <img src="assets/img/produtos/sorvete-potes.jpg" alt="Copão de sorvete Tropical de 430ml, ideal para matar a vontade a qualquer hora" loading="lazy">
           </div>
           <div class="produto-icon">
             <svg viewBox="0 0 24 24"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.73z"/><polyline points="3.29 7 12 12 20.71 7"/><line x1="12" y1="22" x2="12" y2="12"/></svg>
@@ -1440,7 +1517,7 @@
 
         <div class="produto-card">
           <div class="produto-img-wrap">
-            <img src="assets/img/produtos/geladinho-tropgurt.jpg" alt="Geladinhos e Tropgurt, iogurte gelado da Tropical Sorvetes" loading="lazy">
+            <img src="assets/img/produtos/geladinho-tropgurt.jpg" alt="Pacote de Tropgurt, sorvete iogurte da Tropical Sorvetes com 50 unidades" loading="lazy">
           </div>
           <div class="produto-icon">
             <svg viewBox="0 0 24 24"><path d="M9 2v6l-5 8a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-5-8V2"/><path d="M9 2h6"/><path d="M8 15h8"/></svg>
@@ -1515,6 +1592,108 @@
       <p class="sabores-note">Não achou seu favorito? <strong>Chama a gente no WhatsApp</strong> e confira o sabor da semana.</p>
     </div>
   </section>
+
+  <!-- GALERIA -->
+  <section class="galeria" id="galeria" aria-labelledby="galeria-title">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-tag">Direto de fábrica</span>
+        <h2 class="section-title" id="galeria-title">Nossos produtos de <span>perto</span></h2>
+        <p class="section-subtitle">Fotos reais da nossa produção: é isso que chega na sua casa ou no seu comércio.</p>
+      </div>
+      <div class="galeria-grid" id="galeriaGrid">
+        <button type="button" class="galeria-item" data-src="assets/img/galeria/picole-blue-ice.jpg" data-caption="Picolé sabor Blue Ice">
+          <img src="assets/img/galeria/picole-blue-ice.jpg" alt="Picolé sabor Blue Ice da Tropical Sorvetes" loading="lazy">
+        </button>
+        <button type="button" class="galeria-item" data-src="assets/img/galeria/tropgurt-pacote-1.jpg" data-caption="Tropgurt, sorvete iogurte com 50 unidades">
+          <img src="assets/img/galeria/tropgurt-pacote-1.jpg" alt="Pacote de Tropgurt com 50 unidades, sorvete iogurte" loading="lazy">
+        </button>
+        <button type="button" class="galeria-item" data-src="assets/img/galeria/picole-morango.jpg" data-caption="Picolé sabor morango">
+          <img src="assets/img/galeria/picole-morango.jpg" alt="Picolé sabor morango da Tropical Sorvetes" loading="lazy">
+        </button>
+        <button type="button" class="galeria-item" data-src="assets/img/galeria/tropgurt-pacote-2.jpg" data-caption="Tropgurt, sorvete iogurte">
+          <img src="assets/img/galeria/tropgurt-pacote-2.jpg" alt="Pacote de Tropgurt, sorvete iogurte, outro ângulo" loading="lazy">
+        </button>
+        <button type="button" class="galeria-item" data-src="assets/img/galeria/picole-cremoso-cafe.jpg" data-caption="Picolé cremoso sabor café">
+          <img src="assets/img/galeria/picole-cremoso-cafe.jpg" alt="Picolé cremoso sabor café da Tropical Sorvetes" loading="lazy">
+        </button>
+        <button type="button" class="galeria-item" data-src="assets/img/galeria/picole-crocante-branco.jpg" data-caption="Picolé com cobertura crocante">
+          <img src="assets/img/galeria/picole-crocante-branco.jpg" alt="Picolé com cobertura branca crocante" loading="lazy">
+        </button>
+        <button type="button" class="galeria-item" data-src="assets/img/galeria/pote-240ml-1.jpg" data-caption="Pote de sorvete de 240ml">
+          <img src="assets/img/galeria/pote-240ml-1.jpg" alt="Pote de sorvete Tropical de 240ml" loading="lazy">
+        </button>
+        <button type="button" class="galeria-item" data-src="assets/img/galeria/potes-240ml-variedade.jpg" data-caption="Variedade de sabores em potes de 240ml">
+          <img src="assets/img/galeria/potes-240ml-variedade.jpg" alt="Potes de 240ml abertos, mostrando a variedade de sabores" loading="lazy">
+        </button>
+        <button type="button" class="galeria-item" data-src="assets/img/galeria/pote-240ml-2.jpg" data-caption="Pote de sorvete de 240ml">
+          <img src="assets/img/galeria/pote-240ml-2.jpg" alt="Pote de sorvete Tropical de 240ml, vista lateral" loading="lazy">
+        </button>
+        <button type="button" class="galeria-item" data-src="assets/img/galeria/pote-240ml-3.jpg" data-caption="Pote de sorvete de 240ml">
+          <img src="assets/img/galeria/pote-240ml-3.jpg" alt="Pote de sorvete Tropical de 240ml" loading="lazy">
+        </button>
+        <button type="button" class="galeria-item" data-src="assets/img/galeria/pote-240ml-4.jpg" data-caption="Pote de sorvete de 240ml">
+          <img src="assets/img/galeria/pote-240ml-4.jpg" alt="Pote de sorvete Tropical de 240ml, sabor especial" loading="lazy">
+        </button>
+        <button type="button" class="galeria-item" data-src="assets/img/galeria/pote-240ml-5.jpg" data-caption="Pote de sorvete de 240ml">
+          <img src="assets/img/galeria/pote-240ml-5.jpg" alt="Pote de sorvete Tropical de 240ml" loading="lazy">
+        </button>
+        <button type="button" class="galeria-item" data-src="assets/img/galeria/copao-430ml-1.jpg" data-caption="Copão de 430ml">
+          <img src="assets/img/galeria/copao-430ml-1.jpg" alt="Copão de sorvete Tropical de 430ml" loading="lazy">
+        </button>
+        <button type="button" class="galeria-item" data-src="assets/img/galeria/copao-430ml-2.jpg" data-caption="Copão de 430ml">
+          <img src="assets/img/galeria/copao-430ml-2.jpg" alt="Copão de sorvete Tropical de 430ml, vista lateral" loading="lazy">
+        </button>
+        <button type="button" class="galeria-item" data-src="assets/img/galeria/copao-430ml-3.jpg" data-caption="Copão de 430ml">
+          <img src="assets/img/galeria/copao-430ml-3.jpg" alt="Copão de sorvete Tropical de 430ml, vista de cima" loading="lazy">
+        </button>
+        <button type="button" class="galeria-item" data-src="assets/img/galeria/sorvete-1l-flocos-chocolate.jpg" data-caption="Sorvete de 1 litro sabor Flocos e Chocolate">
+          <img src="assets/img/galeria/sorvete-1l-flocos-chocolate.jpg" alt="Pote de sorvete Tropical de 1 litro sabor Flocos e Chocolate" loading="lazy">
+        </button>
+        <button type="button" class="galeria-item" data-src="assets/img/galeria/copao-430ml-morango.jpg" data-caption="Copão de 430ml sabor morango">
+          <img src="assets/img/galeria/copao-430ml-morango.jpg" alt="Copão de sorvete Tropical de 430ml, sabor morango" loading="lazy">
+        </button>
+        <button type="button" class="galeria-item" data-src="assets/img/galeria/sorvete-1l-napolitano.jpg" data-caption="Sorvete de 1 litro sabor Napolitano">
+          <img src="assets/img/galeria/sorvete-1l-napolitano.jpg" alt="Pote de sorvete Tropical de 1 litro sabor Napolitano" loading="lazy">
+        </button>
+        <button type="button" class="galeria-item" data-src="assets/img/galeria/picoles-crocante-linha.jpg" data-caption="Linha de picolés Crocante">
+          <img src="assets/img/galeria/picoles-crocante-linha.jpg" alt="Linha de picolés Crocante nos sabores morango, flocos, chocolate e leite condensado" loading="lazy">
+        </button>
+        <button type="button" class="galeria-item" data-src="assets/img/galeria/picole-crocante-chocolate.jpg" data-caption="Picolé Crocante sabor chocolate">
+          <img src="assets/img/galeria/picole-crocante-chocolate.jpg" alt="Picolé Crocante sabor chocolate" loading="lazy">
+        </button>
+        <button type="button" class="galeria-item" data-src="assets/img/galeria/picole-crocante-leite-condensado.jpg" data-caption="Picolé Crocante sabor leite condensado">
+          <img src="assets/img/galeria/picole-crocante-leite-condensado.jpg" alt="Picolé Crocante sabor leite condensado" loading="lazy">
+        </button>
+        <button type="button" class="galeria-item" data-src="assets/img/galeria/geladinhos-ice-bom.jpg" data-caption="Geladinhos Ice Bom, 40 unidades">
+          <img src="assets/img/galeria/geladinhos-ice-bom.jpg" alt="Pacote de geladinhos Ice Bom, 40 unidades" loading="lazy">
+        </button>
+        <button type="button" class="galeria-item" data-src="assets/img/galeria/picole-crocante-flocos.jpg" data-caption="Picolé Crocante sabor flocos">
+          <img src="assets/img/galeria/picole-crocante-flocos.jpg" alt="Picolé Crocante sabor flocos" loading="lazy">
+        </button>
+        <button type="button" class="galeria-item" data-src="assets/img/galeria/picole-crocante-morango.jpg" data-caption="Picolé Crocante sabor morango">
+          <img src="assets/img/galeria/picole-crocante-morango.jpg" alt="Picolé Crocante sabor morango" loading="lazy">
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX DA GALERIA -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+    <button type="button" class="lightbox-btn lightbox-close" id="lightboxClose" aria-label="Fechar">
+      <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <button type="button" class="lightbox-btn lightbox-prev" id="lightboxPrev" aria-label="Foto anterior">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <figure class="lightbox-figure">
+      <img src="" alt="" id="lightboxImg">
+      <figcaption id="lightboxCaption"></figcaption>
+    </figure>
+    <button type="button" class="lightbox-btn lightbox-next" id="lightboxNext" aria-label="Próxima foto">
+      <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
 
   <!-- REVENDA / COMÉRCIO -->
   <section class="revenda" id="revenda" aria-labelledby="revenda-title">
@@ -1733,7 +1912,7 @@
           <div class="footer-logo">
             <img src="logo.png" alt="Tropical Sorvetes — Logo" loading="lazy">
           </div>
-          <p>Tropical Sorvetes — sorvetes, picolés e açaí de tradição há mais de 30 anos, direto de fábrica para famílias e revendedores do Vale do Acaraú, em Marco/CE.</p>
+          <p>Tropical Sorvetes — sorvetes, picolés e açaí de tradição há mais de 30 anos, direto de fábrica para famílias e revendedores do Vale do Acaraú e região, em Marco/CE.</p>
           <div class="footer-social">
             <a href="https://www.instagram.com/sorveteriatropicalmarco/" target="_blank" rel="noopener" aria-label="Instagram Tropical Sorvetes">
               <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
@@ -1751,6 +1930,7 @@
             <li><a href="#sobre">Sobre nós</a></li>
             <li><a href="#produtos">Produtos</a></li>
             <li><a href="#sabores">Sabores</a></li>
+            <li><a href="#galeria">Galeria</a></li>
             <li><a href="#diferenciais">Diferenciais</a></li>
             <li><a href="#revenda">Revenda</a></li>
             <li><a href="#contato">Contato</a></li>
@@ -1908,7 +2088,7 @@
       function resize() { canvas.width = canvas.offsetWidth; canvas.height = canvas.offsetHeight; }
       resize();
       window.addEventListener('resize', resize, { passive: true });
-      const COLORS = ['242,118,12','255,255,255','255,199,54'];
+      const COLORS = ['240,129,46','255,255,255','255,199,54'];
       function P() { this.init(true); }
       P.prototype.init = function(s) {
         this.x = Math.random() * canvas.width;
@@ -1976,6 +2156,7 @@
       { sel: '.valor-card',          dir: 'up',   stagger: true },
       { sel: '.diff-card',           dir: 'up',   stagger: true },
       { sel: '.produto-card',        dir: 'up',   stagger: true },
+      { sel: '.galeria-item',        dir: 'up',   stagger: true },
       { sel: '.sabores-tags',        dir: 'scale' },
       { sel: '.revenda-box',         dir: 'scale' },
       { sel: '.vitrine-box',         dir: 'scale' },
@@ -2152,6 +2333,49 @@
         btn.style.transform = '';
       });
     });
+
+    // Galeria: lightbox
+    (function() {
+      const items = Array.from(document.querySelectorAll('.galeria-item'));
+      if (!items.length) return;
+      const lightbox = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lightboxImg');
+      const lbCaption = document.getElementById('lightboxCaption');
+      const btnClose = document.getElementById('lightboxClose');
+      const btnPrev = document.getElementById('lightboxPrev');
+      const btnNext = document.getElementById('lightboxNext');
+      let current = 0;
+
+      function show(i) {
+        current = (i + items.length) % items.length;
+        const item = items[current];
+        lbImg.src = item.dataset.src;
+        lbImg.alt = item.querySelector('img').alt;
+        lbCaption.textContent = item.dataset.caption || '';
+      }
+      function open(i) {
+        show(i);
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+      function close() {
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+      items.forEach((item, i) => item.addEventListener('click', () => open(i)));
+      btnClose.addEventListener('click', close);
+      btnPrev.addEventListener('click', () => show(current - 1));
+      btnNext.addEventListener('click', () => show(current + 1));
+      lightbox.addEventListener('click', e => { if (e.target === lightbox) close(); });
+      document.addEventListener('keydown', e => {
+        if (!lightbox.classList.contains('open')) return;
+        if (e.key === 'Escape') close();
+        if (e.key === 'ArrowLeft') show(current - 1);
+        if (e.key === 'ArrowRight') show(current + 1);
+      });
+    })();
   </script>
 </body>
 </html>
