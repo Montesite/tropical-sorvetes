@@ -1,0 +1,14 @@
+# HTML sempre revalidado: evita que o CDN/navegador mostre uma versão antiga
+# da página apontando para imagens que já foram trocadas.
+<IfModule mod_headers.c>
+  <FilesMatch "\.html?$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+  # Imagens, fontes e ícones podem ficar em cache por bastante tempo
+  <FilesMatch "\.(webp|jpe?g|png|ico|svg)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+</IfModule>
+
+# Bloqueia acesso ao repositório git publicado junto com o site
+RedirectMatch 404 /\.git
