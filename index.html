@@ -20,15 +20,15 @@
   <meta property="og:site_name" content="Tropical Sorvetes">
   <meta property="og:title" content="Tropical Sorvetes | Tradição de mais de 30 anos no Vale do Acaraú e região">
   <meta property="og:description" content="Sorvetes, picolés e açaí direto de fábrica para sua família e parceria de qualidade para o seu comércio em Marco/CE.">
-  <meta property="og:image" content="https://www.tropicalsorvetes.com.br/favicon-512.png">
-  <meta property="og:image:width" content="512">
-  <meta property="og:image:height" content="512">
+  <meta property="og:image" content="https://www.tropicalsorvetes.com.br/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:locale" content="pt_BR">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Tropical Sorvetes | Tradição de mais de 30 anos no Vale do Acaraú e região">
   <meta name="twitter:description" content="Sorvetes, picolés e açaí direto de fábrica para sua família e parceria de qualidade para o seu comércio em Marco/CE.">
-  <meta name="twitter:image" content="https://www.tropicalsorvetes.com.br/favicon-512.png">
+  <meta name="twitter:image" content="https://www.tropicalsorvetes.com.br/og-image.jpg">
 
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -80,8 +80,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="image" href="assets/img/hero-bg.jpg" fetchpriority="high">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/hero-bg.webp" type="image/webp" fetchpriority="high">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Baloo+2:wght@700;800&display=swap" rel="stylesheet">
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -217,7 +217,7 @@
     .hero {
       position: relative; min-height: 100vh;
       display: flex; align-items: center; padding-top: 88px;
-      background-image: url('assets/img/hero-bg.jpg');
+      background-image: url('assets/img/hero-bg.webp');
       background-size: cover; background-position: center;
       overflow: hidden;
     }
@@ -388,7 +388,7 @@
     /* ===== MERCADO DE ATUAÇÃO ===== */
     .mercado {
       position: relative; overflow: hidden;
-      background-image: url('assets/img/mercado-bg.jpg');
+      background-image: url('assets/img/mercado-bg.webp');
       background-size: cover; background-position: center;
     }
     .mercado::before {
@@ -411,7 +411,7 @@
     /* ===== MISSÃO, VISÃO E VALORES ===== */
     .missao-visao {
       position: relative; overflow: hidden;
-      background-image: url('assets/img/missao-bg.jpg');
+      background-image: url('assets/img/missao-bg.webp');
       background-size: cover; background-position: center;
     }
     .missao-visao::before {
@@ -467,7 +467,7 @@
     /* ===== DIFERENCIAIS ===== */
     .diferenciais {
       position: relative; overflow: hidden;
-      background-image: url('assets/img/diferenciais-bg.jpg');
+      background-image: url('assets/img/diferenciais-bg.webp');
       background-size: cover; background-position: center;
     }
     .diferenciais::before {
@@ -508,7 +508,7 @@
     /* ===== PRODUTOS ===== */
     .produtos {
       position: relative;
-      background-image: url('assets/img/produtos-bg.jpg');
+      background-image: url('assets/img/produtos-bg.webp');
       background-size: cover; background-position: center;
     }
     .produtos::before {
@@ -573,7 +573,7 @@
     /* ===== SABORES ===== */
     .sabores {
       position: relative; overflow: hidden;
-      background-image: url('assets/img/revenda-bg.jpg');
+      background-image: url('assets/img/revenda-bg.webp');
       background-size: cover; background-position: center;
     }
     .sabores::before {
@@ -603,8 +603,61 @@
       transition: border-color 0.22s ease, background 0.22s ease, transform 0.22s ease, color 0.22s ease;
     }
     .sabor-tag:hover { border-color: var(--orange); background: var(--orange); color: var(--white); transform: translateY(-2px); }
+    .filtros { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 8px 0 28px; }
+    .filtro {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: var(--white); border: 1px solid var(--gray-200); cursor: pointer;
+      padding: 9px 18px; border-radius: 50px; font: inherit;
+      font-size: 0.86rem; font-weight: 700; color: var(--dark);
+      transition: border-color 0.22s ease, background 0.22s ease, color 0.22s ease, transform 0.22s ease;
+    }
+    .filtro span {
+      font-size: 0.72rem; font-weight: 700; line-height: 1;
+      padding: 3px 7px; border-radius: 50px; background: var(--gray-200); color: var(--dark);
+      transition: background 0.22s ease, color 0.22s ease;
+    }
+    .filtro:hover { border-color: var(--orange); transform: translateY(-2px); }
+    .filtro.active { background: var(--orange); border-color: var(--orange); color: var(--white); }
+    .filtro.active span { background: rgba(255,255,255,0.25); color: var(--white); }
+    .filtro:focus-visible { outline: 2px solid var(--orange-dark); outline-offset: 3px; }
+
+    .sabores-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+    .sabor-card {
+      position: relative; aspect-ratio: 4 / 5; border-radius: 18px; overflow: hidden;
+      padding: 0; border: 0; cursor: pointer; background: var(--gray-200);
+      box-shadow: 0 6px 18px rgba(80,40,10,0.14);
+      transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s ease;
+    }
+    .sabor-card img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      transition: transform 0.5s cubic-bezier(0.22,1,0.36,1);
+    }
+    .sabor-card:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(80,40,10,0.24); }
+    .sabor-card:hover img { transform: scale(1.06); }
+    .sabor-card:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
+    .sabor-card.hidden { display: none; }
+    .sabor-card.reveal { animation: saborIn 0.4s cubic-bezier(0.22,1,0.36,1) both; }
+    @keyframes saborIn { from { opacity: 0; transform: translateY(12px) scale(0.97); } to { opacity: 1; transform: none; } }
+
+    .sabores-outros-title {
+      font-family: 'Baloo 2', sans-serif; font-size: 1.15rem; font-weight: 700;
+      color: var(--dark); text-align: center; margin: 44px 0 14px;
+    }
+    @media (max-width: 1100px) { .sabores-grid { grid-template-columns: repeat(4, 1fr); } }
+    @media (max-width: 860px)  { .sabores-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; } }
+    @media (max-width: 560px)  {
+      .sabores-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .sabor-card { border-radius: 14px; }
+      .filtros { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; margin-left: -16px; margin-right: -16px; padding: 4px 16px 6px; scrollbar-width: none; }
+      .filtros::-webkit-scrollbar { display: none; }
+      .filtro { flex: 0 0 auto; }
+    }
+    @media (prefers-reduced-motion: reduce) { .sabor-card.reveal { animation: none; } }
     .sabores-note { text-align: center; margin-top: 30px; font-size: 0.92rem; color: var(--text-light); }
     .sabores-note strong { color: var(--orange-dark); }
+
+    /* Fundos de seção só carregam quando a seção se aproxima da tela */
+    .lazy-bg { background-image: none !important; }
 
     /* ===== GALERIA ===== */
     .galeria { background: var(--dark); }
@@ -612,38 +665,49 @@
     .galeria .section-title { color: var(--white); }
     .galeria .section-subtitle { color: rgba(255,255,255,0.72); }
 
+    .galeria .filtro { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.16); color: rgba(255,255,255,0.88); }
+    .galeria .filtro span { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.85); }
+    .galeria .filtro:hover { border-color: var(--orange); }
+    .galeria .filtro.active { background: var(--orange); border-color: var(--orange); color: var(--white); }
+    .galeria .filtro:focus-visible { outline-color: var(--gold); }
+
     .galeria-grid {
-      display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px;
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
     }
     .galeria-item {
-      position: relative; aspect-ratio: 1 / 1; border-radius: 14px; overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.10); background: rgba(255,255,255,0.04);
-      cursor: pointer; padding: 0;
+      position: relative; aspect-ratio: 4 / 5; border-radius: 16px; overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.10); background: #2a1a10;
+      cursor: pointer; padding: 0; isolation: isolate;
       transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), border-color 0.3s ease, box-shadow 0.3s ease;
     }
+    /* Fundo desfocado da própria foto: o produto aparece inteiro, sem cortes */
+    .galeria-item::before {
+      content: ''; position: absolute; inset: -24px; z-index: -1;
+      background: var(--thumb) center / cover no-repeat;
+      filter: blur(22px) saturate(1.2) brightness(0.75);
+    }
     .galeria-item img {
-      width: 100%; height: 100%; object-fit: cover; display: block;
+      width: 100%; height: 100%; object-fit: contain; display: block;
+      padding: 10px 10px 44px;
       transition: transform 0.5s cubic-bezier(0.22,1,0.36,1);
     }
     .galeria-item::after {
-      content: ''; position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(22,12,6,0.55) 0%, transparent 45%);
-      opacity: 0; transition: opacity 0.3s ease;
+      content: ''; position: absolute; inset: auto 0 0; height: 45%;
+      background: linear-gradient(to top, rgba(22,12,6,0.85) 0%, transparent 100%);
+      pointer-events: none;
     }
-    .galeria-item::before {
-      content: ''; position: absolute; z-index: 1; top: 50%; left: 50%;
-      width: 34px; height: 34px; border-radius: 50%;
-      background: rgba(255,255,255,0.16) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3Cline x1='11' y1='8' x2='11' y2='14'/%3E%3Cline x1='8' y1='11' x2='14' y2='11'/%3E%3C/svg%3E") center/16px no-repeat;
-      backdrop-filter: blur(2px);
-      transform: translate(-50%, -50%) scale(0.6); opacity: 0;
-      transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), opacity 0.3s ease;
+    .galeria-label {
+      position: absolute; z-index: 1; left: 12px; right: 12px; bottom: 12px;
+      font-size: 0.82rem; font-weight: 600; line-height: 1.3; color: var(--white); text-align: left;
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
     }
-    .galeria-item:hover { border-color: var(--orange); box-shadow: 0 10px 26px rgba(0,0,0,0.35); transform: translateY(-3px); }
-    .galeria-item:hover img { transform: scale(1.10); }
-    .galeria-item:hover::after,
-    .galeria-item:hover::before { opacity: 1; }
-    .galeria-item:hover::before { transform: translate(-50%, -50%) scale(1); }
+    .galeria-item:hover { border-color: var(--orange); box-shadow: 0 12px 28px rgba(0,0,0,0.4); transform: translateY(-4px); }
+    .galeria-item:hover img { transform: scale(1.05); }
     .galeria-item:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+    .galeria-item.hidden { display: none; }
+    .galeria-item.reveal { animation: saborIn 0.4s cubic-bezier(0.22,1,0.36,1) both; }
+    .galeria-hint { text-align: center; margin-top: 22px; font-size: 0.86rem; color: rgba(255,255,255,0.6); }
+    .galeria-hint[hidden] { display: none; }
 
     /* Lightbox */
     .lightbox {
@@ -658,7 +722,11 @@
       max-width: 100%; max-height: 78vh; border-radius: 12px; display: block; margin: 0 auto;
       box-shadow: 0 20px 60px rgba(0,0,0,0.5);
     }
-    .lightbox-figure figcaption { color: rgba(255,255,255,0.85); font-size: 0.92rem; margin-top: 16px; }
+    .lightbox-figure figcaption { color: rgba(255,255,255,0.85); font-size: 0.92rem; margin-top: 16px; display: flex; flex-direction: column; gap: 4px; align-items: center; }
+    .lightbox-counter { font-size: 0.78rem; color: rgba(255,255,255,0.55); letter-spacing: 0.04em; }
+    .lightbox-figure img { transition: opacity 0.2s ease; }
+    .lightbox-figure img.loading { opacity: 0.25; }
+    .lightbox-btn[hidden] { display: none; }
     .lightbox-btn {
       position: absolute; display: flex; align-items: center; justify-content: center;
       width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.25);
@@ -672,20 +740,22 @@
     .lightbox-next { right: 24px; top: 50%; transform: translateY(-50%); }
 
     @media (max-width: 900px) {
-      .galeria-grid { grid-template-columns: repeat(4, 1fr); gap: 10px; }
+      .galeria-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
       .lightbox-prev, .lightbox-next { width: 40px; height: 40px; }
       .lightbox-prev { left: 10px; } .lightbox-next { right: 10px; }
       .lightbox-close { top: 14px; right: 14px; }
     }
     @media (max-width: 560px) {
-      .galeria-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
-      .galeria-item { border-radius: 10px; }
+      .galeria-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .galeria-item { border-radius: 12px; }
+      .galeria-item img { padding: 8px 8px 40px; }
+      .galeria-label { font-size: 0.76rem; left: 10px; right: 10px; bottom: 10px; }
     }
 
     /* ===== REVENDA / COMÉRCIO ===== */
     .revenda {
       position: relative; overflow: hidden;
-      background-image: url('assets/img/contato-bg.jpg');
+      background-image: url('assets/img/contato-bg.webp');
       background-size: cover; background-position: center;
     }
     .revenda::before {
@@ -778,7 +848,7 @@
     /* ===== CONTATO ===== */
     .contato {
       position: relative; overflow: hidden;
-      background-image: url('assets/img/sobre-bg.jpg');
+      background-image: url('assets/img/sobre-bg.webp');
       background-size: cover; background-position: center;
     }
     .contato::before {
@@ -1160,7 +1230,7 @@
     <div class="container">
       <div class="header-inner">
         <a href="#inicio" class="logo-link" aria-label="Tropical Sorvetes - Início">
-          <img src="logo.png" alt="Tropical Sorvetes — Logo" fetchpriority="high">
+          <img src="logo.webp" alt="Tropical Sorvetes — Logo" fetchpriority="high">
         </a>
         <nav aria-label="Menu principal">
           <a href="#inicio">Início</a>
@@ -1280,7 +1350,7 @@
     <div class="container">
       <div class="sobre-grid">
         <div class="sobre-img-wrap reveal-left">
-          <img src="assets/img/produtos/picole-cremoso.jpg" alt="Linha de picolés cremosos coloridos da Tropical Sorvetes" loading="lazy">
+          <img src="assets/img/produtos/picole-cremoso.webp" alt="Linha de picolés cremosos coloridos da Tropical Sorvetes" loading="lazy">
           <div class="sobre-img-overlay">
             <div class="sobre-badge">
               <strong>30+</strong>
@@ -1306,7 +1376,7 @@
   </section>
 
   <!-- MERCADO DE ATUAÇÃO -->
-  <section class="mercado" id="mercado" aria-labelledby="mercado-title">
+  <section class="mercado lazy-bg" id="mercado" aria-labelledby="mercado-title">
     <div class="container">
       <div class="mercado-text">
         <span class="section-tag">Mercado de atuação</span>
@@ -1332,7 +1402,7 @@
   </section>
 
   <!-- MISSÃO, VISÃO E VALORES -->
-  <section class="missao-visao" id="missao-visao" aria-labelledby="mv-title">
+  <section class="missao-visao lazy-bg" id="missao-visao" aria-labelledby="mv-title">
     <div class="container">
       <div class="section-header center">
         <span class="section-tag">Nosso propósito</span>
@@ -1395,7 +1465,7 @@
   </section>
 
   <!-- DIFERENCIAIS -->
-  <section class="diferenciais" id="diferenciais" aria-labelledby="diff-title">
+  <section class="diferenciais lazy-bg" id="diferenciais" aria-labelledby="diff-title">
     <div class="container">
       <div class="section-header center">
         <span class="section-tag">Por que nos escolher</span>
@@ -1462,7 +1532,7 @@
   </section>
 
   <!-- PRODUTOS -->
-  <section class="produtos" id="produtos" aria-labelledby="produtos-title">
+  <section class="produtos lazy-bg" id="produtos" aria-labelledby="produtos-title">
     <div class="container">
       <div class="section-header center">
         <span class="section-tag">O que oferecemos</span>
@@ -1473,7 +1543,7 @@
 
         <div class="produto-card">
           <div class="produto-img-wrap">
-            <img src="assets/img/produtos/picole-variados.jpg" alt="Linha de picolés Crocante Tropical Sorvetes nos sabores morango, flocos, chocolate e leite condensado" loading="lazy">
+            <img src="assets/img/produtos/picole-variados.webp" alt="Linha de picolés Crocante Tropical Sorvetes nos sabores morango, flocos, chocolate e leite condensado" loading="lazy">
           </div>
           <div class="produto-icon">
             <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
@@ -1484,7 +1554,7 @@
 
         <div class="produto-card">
           <div class="produto-img-wrap">
-            <img src="assets/img/produtos/sorvete-1l.jpg" alt="Pote de sorvete Tropical de 1 litro sabor Flocos e Chocolate" loading="lazy">
+            <img src="assets/img/produtos/sorvete-1l.webp" alt="Pote de sorvete Tropical de 1 litro sabor Flocos e Chocolate" loading="lazy">
           </div>
           <div class="produto-icon">
             <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
@@ -1495,7 +1565,7 @@
 
         <div class="produto-card">
           <div class="produto-img-wrap">
-            <img src="assets/img/produtos/sorvete-potes.jpg" alt="Copão de sorvete Tropical de 430ml, ideal para matar a vontade a qualquer hora" loading="lazy">
+            <img src="assets/img/produtos/sorvete-potes.webp" alt="Copão de sorvete Tropical de 430ml, ideal para matar a vontade a qualquer hora" loading="lazy">
           </div>
           <div class="produto-icon">
             <svg viewBox="0 0 24 24"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.73z"/><polyline points="3.29 7 12 12 20.71 7"/><line x1="12" y1="22" x2="12" y2="12"/></svg>
@@ -1506,7 +1576,7 @@
 
         <div class="produto-card">
           <div class="produto-img-wrap">
-            <img src="assets/img/produtos/acai.jpg" alt="Caixa e potes de açaí Tropical Sorvetes" loading="lazy">
+            <img src="assets/img/produtos/acai.webp" alt="Caixa e potes de açaí Tropical Sorvetes" loading="lazy">
           </div>
           <div class="produto-icon">
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
@@ -1517,7 +1587,7 @@
 
         <div class="produto-card">
           <div class="produto-img-wrap">
-            <img src="assets/img/produtos/geladinho-tropgurt.jpg" alt="Pacote de Tropgurt, sorvete iogurte da Tropical Sorvetes com 50 unidades" loading="lazy">
+            <img src="assets/img/produtos/geladinho-tropgurt.webp" alt="Pacote de Tropgurt, sorvete iogurte da Tropical Sorvetes com 50 unidades" loading="lazy">
           </div>
           <div class="produto-icon">
             <svg viewBox="0 0 24 24"><path d="M9 2v6l-5 8a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-5-8V2"/><path d="M9 2h6"/><path d="M8 15h8"/></svg>
@@ -1535,7 +1605,7 @@
   </div>
 
   <!-- SABORES -->
-  <section class="sabores" id="sabores" aria-labelledby="sabores-title">
+  <section class="sabores lazy-bg" id="sabores" aria-labelledby="sabores-title">
     <div class="sabores-float" id="saboresFloat" aria-hidden="true"></div>
     <div class="container">
       <div class="section-header center">
@@ -1543,50 +1613,150 @@
         <h2 class="section-title" id="sabores-title">Mais de 40 <span>sabores</span> pra você escolher</h2>
         <p class="section-subtitle">Do clássico ao inusitado, um verdadeiro buffet de sorvetes para todos os gostos.</p>
       </div>
+      <div class="filtros" role="group" aria-label="Filtrar sabores por categoria" data-grid="saboresGrid">
+        <button type="button" class="filtro active" data-filter="todos" aria-pressed="true">Todos <span>40</span></button>
+        <button type="button" class="filtro" data-filter="classicos" aria-pressed="false">Clássicos <span>10</span></button>
+        <button type="button" class="filtro" data-filter="especiais" aria-pressed="false">Especiais <span>8</span></button>
+        <button type="button" class="filtro" data-filter="naturais" aria-pressed="false">Naturais <span>10</span></button>
+        <button type="button" class="filtro" data-filter="chocolates" aria-pressed="false">Chocolates <span>2</span></button>
+        <button type="button" class="filtro" data-filter="bombons" aria-pressed="false">Bombons <span>5</span></button>
+        <button type="button" class="filtro" data-filter="kids" aria-pressed="false">Kids <span>5</span></button>
+      </div>
+      <div class="sabores-grid" id="saboresGrid">
+        <button type="button" class="sabor-card" data-cat="classicos" data-src="assets/img/sabores/leite-condensado.webp" data-caption="Sorvete sabor Leite Condensado · Clássicos">
+          <img src="assets/img/sabores/thumb/leite-condensado.webp" alt="Sorvete Tropical sabor Leite Condensado" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="classicos" data-src="assets/img/sabores/alfajor.webp" data-caption="Sorvete sabor Alfajor · Clássicos">
+          <img src="assets/img/sabores/thumb/alfajor.webp" alt="Sorvete Tropical sabor Alfajor" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="classicos" data-src="assets/img/sabores/napolitano.webp" data-caption="Sorvete sabor Napolitano · Clássicos">
+          <img src="assets/img/sabores/thumb/napolitano.webp" alt="Sorvete Tropical sabor Napolitano" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="classicos" data-src="assets/img/sabores/flocos.webp" data-caption="Sorvete sabor Flocos · Clássicos">
+          <img src="assets/img/sabores/thumb/flocos.webp" alt="Sorvete Tropical sabor Flocos" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="classicos" data-src="assets/img/sabores/tapioca.webp" data-caption="Sorvete sabor Tapioca · Clássicos">
+          <img src="assets/img/sabores/thumb/tapioca.webp" alt="Sorvete Tropical sabor Tapioca" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="classicos" data-src="assets/img/sabores/brigadeiro.webp" data-caption="Sorvete sabor Brigadeiro · Clássicos">
+          <img src="assets/img/sabores/thumb/brigadeiro.webp" alt="Sorvete Tropical sabor Brigadeiro" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="classicos" data-src="assets/img/sabores/morango.webp" data-caption="Sorvete sabor Morango · Clássicos">
+          <img src="assets/img/sabores/thumb/morango.webp" alt="Sorvete Tropical sabor Morango" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="classicos" data-src="assets/img/sabores/ninho-trufado.webp" data-caption="Sorvete sabor Ninho Trufado · Clássicos">
+          <img src="assets/img/sabores/thumb/ninho-trufado.webp" alt="Sorvete Tropical sabor Ninho Trufado" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="classicos" data-src="assets/img/sabores/baunilha.webp" data-caption="Sorvete sabor Baunilha · Clássicos">
+          <img src="assets/img/sabores/thumb/baunilha.webp" alt="Sorvete Tropical sabor Baunilha" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="classicos" data-src="assets/img/sabores/creme-com-passas.webp" data-caption="Sorvete sabor Creme com Passas · Clássicos">
+          <img src="assets/img/sabores/thumb/creme-com-passas.webp" alt="Sorvete Tropical sabor Creme com Passas" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="especiais" data-src="assets/img/sabores/chokito.webp" data-caption="Sorvete sabor Chokito · Especiais">
+          <img src="assets/img/sabores/thumb/chokito.webp" alt="Sorvete Tropical sabor Chokito" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="especiais" data-src="assets/img/sabores/marula.webp" data-caption="Sorvete sabor Marula · Especiais">
+          <img src="assets/img/sabores/thumb/marula.webp" alt="Sorvete Tropical sabor Marula" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="especiais" data-src="assets/img/sabores/chocomenta.webp" data-caption="Sorvete sabor Chocomenta · Especiais">
+          <img src="assets/img/sabores/thumb/chocomenta.webp" alt="Sorvete Tropical sabor Chocomenta" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="especiais" data-src="assets/img/sabores/pave.webp" data-caption="Sorvete sabor Pavê · Especiais">
+          <img src="assets/img/sabores/thumb/pave.webp" alt="Sorvete Tropical sabor Pavê" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="especiais" data-src="assets/img/sabores/cappuccino.webp" data-caption="Sorvete sabor Cappuccino · Especiais">
+          <img src="assets/img/sabores/thumb/cappuccino.webp" alt="Sorvete Tropical sabor Cappuccino" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="especiais" data-src="assets/img/sabores/pipoca-doce.webp" data-caption="Sorvete sabor Pipoca Doce · Especiais">
+          <img src="assets/img/sabores/thumb/pipoca-doce.webp" alt="Sorvete Tropical sabor Pipoca Doce" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="especiais" data-src="assets/img/sabores/bosque-nevado.webp" data-caption="Sorvete sabor Bosque Nevado · Especiais">
+          <img src="assets/img/sabores/thumb/bosque-nevado.webp" alt="Sorvete Tropical sabor Bosque Nevado" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="especiais" data-src="assets/img/sabores/sensacao.webp" data-caption="Sorvete sabor Sensação · Especiais">
+          <img src="assets/img/sabores/thumb/sensacao.webp" alt="Sorvete Tropical sabor Sensação" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="naturais" data-src="assets/img/sabores/graviola.webp" data-caption="Sorvete sabor Graviola · Naturais">
+          <img src="assets/img/sabores/thumb/graviola.webp" alt="Sorvete Tropical sabor Graviola" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="naturais" data-src="assets/img/sabores/castanha.webp" data-caption="Sorvete sabor Castanha · Naturais">
+          <img src="assets/img/sabores/thumb/castanha.webp" alt="Sorvete Tropical sabor Castanha" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="naturais" data-src="assets/img/sabores/delicia-de-abacaxi.webp" data-caption="Sorvete sabor Delícia de Abacaxi · Naturais">
+          <img src="assets/img/sabores/thumb/delicia-de-abacaxi.webp" alt="Sorvete Tropical sabor Delícia de Abacaxi" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="naturais" data-src="assets/img/sabores/abacaxi-ao-vinho.webp" data-caption="Sorvete sabor Abacaxi ao Vinho · Naturais">
+          <img src="assets/img/sabores/thumb/abacaxi-ao-vinho.webp" alt="Sorvete Tropical sabor Abacaxi ao Vinho" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="naturais" data-src="assets/img/sabores/maracuja.webp" data-caption="Sorvete sabor Maracujá · Naturais">
+          <img src="assets/img/sabores/thumb/maracuja.webp" alt="Sorvete Tropical sabor Maracujá" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="naturais" data-src="assets/img/sabores/nata-goiaba.webp" data-caption="Sorvete sabor Nata Goiaba · Naturais">
+          <img src="assets/img/sabores/thumb/nata-goiaba.webp" alt="Sorvete Tropical sabor Nata Goiaba" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="naturais" data-src="assets/img/sabores/abobora-com-coco.webp" data-caption="Sorvete sabor Abóbora com Coco · Naturais">
+          <img src="assets/img/sabores/thumb/abobora-com-coco.webp" alt="Sorvete Tropical sabor Abóbora com Coco" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="naturais" data-src="assets/img/sabores/amarena-iogurte.webp" data-caption="Sorvete sabor Amarena Iogurte · Naturais">
+          <img src="assets/img/sabores/thumb/amarena-iogurte.webp" alt="Sorvete Tropical sabor Amarena Iogurte" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="naturais" data-src="assets/img/sabores/frutas-tropicais.webp" data-caption="Sorvete sabor Frutas Tropicais · Naturais">
+          <img src="assets/img/sabores/thumb/frutas-tropicais.webp" alt="Sorvete Tropical sabor Frutas Tropicais" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="naturais" data-src="assets/img/sabores/mousse-de-maracuja.webp" data-caption="Sorvete sabor Mousse de Maracujá · Naturais">
+          <img src="assets/img/sabores/thumb/mousse-de-maracuja.webp" alt="Sorvete Tropical sabor Mousse de Maracujá" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="chocolates" data-src="assets/img/sabores/diamante-negro.webp" data-caption="Sorvete sabor Diamante Negro · Chocolates">
+          <img src="assets/img/sabores/thumb/diamante-negro.webp" alt="Sorvete Tropical sabor Diamante Negro" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="chocolates" data-src="assets/img/sabores/floresta-negra.webp" data-caption="Sorvete sabor Floresta Negra · Chocolates">
+          <img src="assets/img/sabores/thumb/floresta-negra.webp" alt="Sorvete Tropical sabor Floresta Negra" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="bombons" data-src="assets/img/sabores/serenata-de-amor.webp" data-caption="Sorvete sabor Serenata de Amor · Bombons">
+          <img src="assets/img/sabores/thumb/serenata-de-amor.webp" alt="Sorvete Tropical sabor Serenata de Amor" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="bombons" data-src="assets/img/sabores/prestigio.webp" data-caption="Sorvete sabor Prestígio · Bombons">
+          <img src="assets/img/sabores/thumb/prestigio.webp" alt="Sorvete Tropical sabor Prestígio" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="bombons" data-src="assets/img/sabores/ouro-branco.webp" data-caption="Sorvete sabor Ouro Branco · Bombons">
+          <img src="assets/img/sabores/thumb/ouro-branco.webp" alt="Sorvete Tropical sabor Ouro Branco" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="bombons" data-src="assets/img/sabores/oreo.webp" data-caption="Sorvete sabor Oreo · Bombons">
+          <img src="assets/img/sabores/thumb/oreo.webp" alt="Sorvete Tropical sabor Oreo" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="bombons" data-src="assets/img/sabores/bombom-castanha.webp" data-caption="Sorvete sabor Bombom Castanha · Bombons">
+          <img src="assets/img/sabores/thumb/bombom-castanha.webp" alt="Sorvete Tropical sabor Bombom Castanha" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="kids" data-src="assets/img/sabores/uva.webp" data-caption="Sorvete sabor Uva · Kids">
+          <img src="assets/img/sabores/thumb/uva.webp" alt="Sorvete Tropical sabor Uva" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="kids" data-src="assets/img/sabores/iogurte.webp" data-caption="Sorvete sabor Iogurte · Kids">
+          <img src="assets/img/sabores/thumb/iogurte.webp" alt="Sorvete Tropical sabor Iogurte" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="kids" data-src="assets/img/sabores/algodao-doce.webp" data-caption="Sorvete sabor Algodão Doce · Kids">
+          <img src="assets/img/sabores/thumb/algodao-doce.webp" alt="Sorvete Tropical sabor Algodão Doce" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="kids" data-src="assets/img/sabores/ceu-azul.webp" data-caption="Sorvete sabor Céu Azul · Kids">
+          <img src="assets/img/sabores/thumb/ceu-azul.webp" alt="Sorvete Tropical sabor Céu Azul" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="kids" data-src="assets/img/sabores/chiclete.webp" data-caption="Sorvete sabor Chiclete · Kids">
+          <img src="assets/img/sabores/thumb/chiclete.webp" alt="Sorvete Tropical sabor Chiclete" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+      </div>
+      <h3 class="sabores-outros-title">E tem mais: outros sabores do nosso buffet</h3>
       <div class="sabores-tags">
-        <span class="sabor-tag">Abacaxi</span>
-        <span class="sabor-tag">Abacaxi ao vinho</span>
         <span class="sabor-tag">Açaí ao ninho</span>
-        <span class="sabor-tag">Alfajor</span>
-        <span class="sabor-tag">Amarena iogurte</span>
-        <span class="sabor-tag">Azulato</span>
         <span class="sabor-tag">Banana</span>
-        <span class="sabor-tag">Baunilha</span>
-        <span class="sabor-tag">Bombom castanha</span>
         <span class="sabor-tag">Bombom crocante</span>
-        <span class="sabor-tag">Bosque nevado</span>
-        <span class="sabor-tag">Brigadeiro</span>
-        <span class="sabor-tag">Capuccino crocante</span>
-        <span class="sabor-tag">Castanha</span>
-        <span class="sabor-tag">Chiclete</span>
-        <span class="sabor-tag">Chocomenta</span>
-        <span class="sabor-tag">Chokito</span>
         <span class="sabor-tag">Coco queimado</span>
         <span class="sabor-tag">Cookies</span>
-        <span class="sabor-tag">Creme com passas</span>
         <span class="sabor-tag">Doce de leite</span>
-        <span class="sabor-tag">Flocos</span>
-        <span class="sabor-tag">Floresta negra</span>
-        <span class="sabor-tag">Frutas tropical</span>
-        <span class="sabor-tag">Iogurte natural</span>
         <span class="sabor-tag">Leitinho</span>
-        <span class="sabor-tag">Leite condensado</span>
-        <span class="sabor-tag">Maracujá</span>
         <span class="sabor-tag">Milho verde</span>
-        <span class="sabor-tag">Morango</span>
-        <span class="sabor-tag">Mousse de maracujá</span>
-        <span class="sabor-tag">Napolitano</span>
         <span class="sabor-tag">Nega maluca</span>
-        <span class="sabor-tag">Ouro branco</span>
-        <span class="sabor-tag">Pavê</span>
-        <span class="sabor-tag">Pipoca doce</span>
         <span class="sabor-tag">Pistache</span>
-        <span class="sabor-tag">Prestígio</span>
-        <span class="sabor-tag">Sensação</span>
-        <span class="sabor-tag">Serenata</span>
         <span class="sabor-tag">Sonho de valsa</span>
-        <span class="sabor-tag">Tapioca</span>
-        <span class="sabor-tag">Uva</span>
         <span class="sabor-tag">Unicórnio</span>
       </div>
       <p class="sabores-note">Não achou seu favorito? <strong>Chama a gente no WhatsApp</strong> e confira o sabor da semana.</p>
@@ -1601,80 +1771,113 @@
         <h2 class="section-title" id="galeria-title">Nossos produtos de <span>perto</span></h2>
         <p class="section-subtitle">Fotos reais da nossa produção: é isso que chega na sua casa ou no seu comércio.</p>
       </div>
+      <div class="filtros" role="group" aria-label="Filtrar fotos por linha de produto" data-grid="galeriaGrid">
+        <button type="button" class="filtro active" data-filter="todos" aria-pressed="true">Destaques <span>12</span></button>
+        <button type="button" class="filtro" data-filter="picoles" aria-pressed="false">Picolés <span>9</span></button>
+        <button type="button" class="filtro" data-filter="potes" aria-pressed="false">Potes 240ml <span>6</span></button>
+        <button type="button" class="filtro" data-filter="copao" aria-pressed="false">Copão 430ml <span>4</span></button>
+        <button type="button" class="filtro" data-filter="litro" aria-pressed="false">Sorvete 1L <span>2</span></button>
+        <button type="button" class="filtro" data-filter="tropgurt" aria-pressed="false">Tropgurt e Geladinho <span>3</span></button>
+      </div>
       <div class="galeria-grid" id="galeriaGrid">
-        <button type="button" class="galeria-item" data-src="assets/img/galeria/picole-blue-ice.jpg" data-caption="Picolé sabor Blue Ice">
-          <img src="assets/img/galeria/picole-blue-ice.jpg" alt="Picolé sabor Blue Ice da Tropical Sorvetes" loading="lazy">
+        <button type="button" class="galeria-item" data-cat="picoles" data-src="assets/img/galeria/picoles-crocante-linha.webp" data-caption="Linha de picolés Crocante" style="--thumb:url('assets/img/galeria/thumb/picoles-crocante-linha.webp')">
+          <img src="assets/img/galeria/thumb/picoles-crocante-linha.webp" alt="Linha de picolés Crocante nos sabores morango, flocos, chocolate e leite condensado" width="560" height="384" loading="lazy" decoding="async">
+          <span class="galeria-label">Linha de picolés Crocante</span>
         </button>
-        <button type="button" class="galeria-item" data-src="assets/img/galeria/tropgurt-pacote-1.jpg" data-caption="Tropgurt, sorvete iogurte com 50 unidades">
-          <img src="assets/img/galeria/tropgurt-pacote-1.jpg" alt="Pacote de Tropgurt com 50 unidades, sorvete iogurte" loading="lazy">
+        <button type="button" class="galeria-item" data-cat="copao" data-src="assets/img/galeria/copao-430ml-1.webp" data-caption="Copão de 430ml" style="--thumb:url('assets/img/galeria/thumb/copao-430ml-1.webp')">
+          <img src="assets/img/galeria/thumb/copao-430ml-1.webp" alt="Copão de sorvete Tropical de 430ml" width="560" height="662" loading="lazy" decoding="async">
+          <span class="galeria-label">Copão de 430ml</span>
         </button>
-        <button type="button" class="galeria-item" data-src="assets/img/galeria/picole-morango.jpg" data-caption="Picolé sabor morango">
-          <img src="assets/img/galeria/picole-morango.jpg" alt="Picolé sabor morango da Tropical Sorvetes" loading="lazy">
+        <button type="button" class="galeria-item" data-cat="litro" data-src="assets/img/galeria/sorvete-1l-flocos-chocolate.webp" data-caption="Sorvete de 1 litro sabor Flocos e Chocolate" style="--thumb:url('assets/img/galeria/thumb/sorvete-1l-flocos-chocolate.webp')">
+          <img src="assets/img/galeria/thumb/sorvete-1l-flocos-chocolate.webp" alt="Pote de sorvete Tropical de 1 litro sabor Flocos e Chocolate" width="560" height="662" loading="lazy" decoding="async">
+          <span class="galeria-label">Sorvete de 1 litro sabor Flocos e Chocolate</span>
         </button>
-        <button type="button" class="galeria-item" data-src="assets/img/galeria/tropgurt-pacote-2.jpg" data-caption="Tropgurt, sorvete iogurte">
-          <img src="assets/img/galeria/tropgurt-pacote-2.jpg" alt="Pacote de Tropgurt, sorvete iogurte, outro ângulo" loading="lazy">
+        <button type="button" class="galeria-item" data-cat="potes" data-src="assets/img/galeria/potes-240ml-variedade.webp" data-caption="Variedade de sabores em potes de 240ml" style="--thumb:url('assets/img/galeria/thumb/potes-240ml-variedade.webp')">
+          <img src="assets/img/galeria/thumb/potes-240ml-variedade.webp" alt="Potes de 240ml abertos, mostrando a variedade de sabores" width="560" height="898" loading="lazy" decoding="async">
+          <span class="galeria-label">Variedade de sabores em potes de 240ml</span>
         </button>
-        <button type="button" class="galeria-item" data-src="assets/img/galeria/picole-cremoso-cafe.jpg" data-caption="Picolé cremoso sabor café">
-          <img src="assets/img/galeria/picole-cremoso-cafe.jpg" alt="Picolé cremoso sabor café da Tropical Sorvetes" loading="lazy">
+        <button type="button" class="galeria-item" data-cat="tropgurt" data-src="assets/img/galeria/tropgurt-pacote-1.webp" data-caption="Tropgurt, sorvete iogurte com 50 unidades" style="--thumb:url('assets/img/galeria/thumb/tropgurt-pacote-1.webp')">
+          <img src="assets/img/galeria/thumb/tropgurt-pacote-1.webp" alt="Pacote de Tropgurt com 50 unidades, sorvete iogurte" width="560" height="754" loading="lazy" decoding="async">
+          <span class="galeria-label">Tropgurt, sorvete iogurte com 50 unidades</span>
         </button>
-        <button type="button" class="galeria-item" data-src="assets/img/galeria/picole-crocante-branco.jpg" data-caption="Picolé com cobertura crocante">
-          <img src="assets/img/galeria/picole-crocante-branco.jpg" alt="Picolé com cobertura branca crocante" loading="lazy">
+        <button type="button" class="galeria-item" data-cat="picoles" data-src="assets/img/galeria/picole-crocante-chocolate.webp" data-caption="Picolé Crocante sabor chocolate" style="--thumb:url('assets/img/galeria/thumb/picole-crocante-chocolate.webp')">
+          <img src="assets/img/galeria/thumb/picole-crocante-chocolate.webp" alt="Picolé Crocante sabor chocolate" width="541" height="1100" loading="lazy" decoding="async">
+          <span class="galeria-label">Picolé Crocante sabor chocolate</span>
         </button>
-        <button type="button" class="galeria-item" data-src="assets/img/galeria/pote-240ml-1.jpg" data-caption="Pote de sorvete de 240ml">
-          <img src="assets/img/galeria/pote-240ml-1.jpg" alt="Pote de sorvete Tropical de 240ml" loading="lazy">
+        <button type="button" class="galeria-item" data-cat="copao" data-src="assets/img/galeria/copao-430ml-morango.webp" data-caption="Copão de 430ml sabor morango" style="--thumb:url('assets/img/galeria/thumb/copao-430ml-morango.webp')">
+          <img src="assets/img/galeria/thumb/copao-430ml-morango.webp" alt="Copão de sorvete Tropical de 430ml, sabor morango" width="560" height="513" loading="lazy" decoding="async">
+          <span class="galeria-label">Copão de 430ml sabor morango</span>
         </button>
-        <button type="button" class="galeria-item" data-src="assets/img/galeria/potes-240ml-variedade.jpg" data-caption="Variedade de sabores em potes de 240ml">
-          <img src="assets/img/galeria/potes-240ml-variedade.jpg" alt="Potes de 240ml abertos, mostrando a variedade de sabores" loading="lazy">
+        <button type="button" class="galeria-item" data-cat="litro" data-src="assets/img/galeria/sorvete-1l-napolitano.webp" data-caption="Sorvete de 1 litro sabor Napolitano" style="--thumb:url('assets/img/galeria/thumb/sorvete-1l-napolitano.webp')">
+          <img src="assets/img/galeria/thumb/sorvete-1l-napolitano.webp" alt="Pote de sorvete Tropical de 1 litro sabor Napolitano" width="560" height="646" loading="lazy" decoding="async">
+          <span class="galeria-label">Sorvete de 1 litro sabor Napolitano</span>
         </button>
-        <button type="button" class="galeria-item" data-src="assets/img/galeria/pote-240ml-2.jpg" data-caption="Pote de sorvete de 240ml">
-          <img src="assets/img/galeria/pote-240ml-2.jpg" alt="Pote de sorvete Tropical de 240ml, vista lateral" loading="lazy">
+        <button type="button" class="galeria-item" data-cat="potes" data-src="assets/img/galeria/pote-240ml-1.webp" data-caption="Pote de sorvete de 240ml" style="--thumb:url('assets/img/galeria/thumb/pote-240ml-1.webp')">
+          <img src="assets/img/galeria/thumb/pote-240ml-1.webp" alt="Pote de sorvete Tropical de 240ml" width="560" height="744" loading="lazy" decoding="async">
+          <span class="galeria-label">Pote de sorvete de 240ml</span>
         </button>
-        <button type="button" class="galeria-item" data-src="assets/img/galeria/pote-240ml-3.jpg" data-caption="Pote de sorvete de 240ml">
-          <img src="assets/img/galeria/pote-240ml-3.jpg" alt="Pote de sorvete Tropical de 240ml" loading="lazy">
+        <button type="button" class="galeria-item" data-cat="tropgurt" data-src="assets/img/galeria/geladinhos-ice-bom.webp" data-caption="Geladinhos Ice Bom, 40 unidades" style="--thumb:url('assets/img/galeria/thumb/geladinhos-ice-bom.webp')">
+          <img src="assets/img/galeria/thumb/geladinhos-ice-bom.webp" alt="Pacote de geladinhos Ice Bom, 40 unidades" width="560" height="697" loading="lazy" decoding="async">
+          <span class="galeria-label">Geladinhos Ice Bom, 40 unidades</span>
         </button>
-        <button type="button" class="galeria-item" data-src="assets/img/galeria/pote-240ml-4.jpg" data-caption="Pote de sorvete de 240ml">
-          <img src="assets/img/galeria/pote-240ml-4.jpg" alt="Pote de sorvete Tropical de 240ml, sabor especial" loading="lazy">
+        <button type="button" class="galeria-item" data-cat="picoles" data-src="assets/img/galeria/picole-blue-ice.webp" data-caption="Picolé sabor Blue Ice" style="--thumb:url('assets/img/galeria/thumb/picole-blue-ice.webp')">
+          <img src="assets/img/galeria/thumb/picole-blue-ice.webp" alt="Picolé sabor Blue Ice da Tropical Sorvetes" width="560" height="366" loading="lazy" decoding="async">
+          <span class="galeria-label">Picolé sabor Blue Ice</span>
         </button>
-        <button type="button" class="galeria-item" data-src="assets/img/galeria/pote-240ml-5.jpg" data-caption="Pote de sorvete de 240ml">
-          <img src="assets/img/galeria/pote-240ml-5.jpg" alt="Pote de sorvete Tropical de 240ml" loading="lazy">
+        <button type="button" class="galeria-item" data-cat="picoles" data-src="assets/img/galeria/picole-cremoso-cafe.webp" data-caption="Picolé cremoso sabor café" style="--thumb:url('assets/img/galeria/thumb/picole-cremoso-cafe.webp')">
+          <img src="assets/img/galeria/thumb/picole-cremoso-cafe.webp" alt="Picolé cremoso sabor café da Tropical Sorvetes" width="437" height="1100" loading="lazy" decoding="async">
+          <span class="galeria-label">Picolé cremoso sabor café</span>
         </button>
-        <button type="button" class="galeria-item" data-src="assets/img/galeria/copao-430ml-1.jpg" data-caption="Copão de 430ml">
-          <img src="assets/img/galeria/copao-430ml-1.jpg" alt="Copão de sorvete Tropical de 430ml" loading="lazy">
+        <button type="button" class="galeria-item extra hidden" data-cat="picoles" data-src="assets/img/galeria/picole-morango.webp" data-caption="Picolé sabor morango" style="--thumb:url('assets/img/galeria/thumb/picole-morango.webp')">
+          <img src="assets/img/galeria/thumb/picole-morango.webp" alt="Picolé sabor morango da Tropical Sorvetes" width="560" height="343" loading="lazy" decoding="async">
+          <span class="galeria-label">Picolé sabor morango</span>
         </button>
-        <button type="button" class="galeria-item" data-src="assets/img/galeria/copao-430ml-2.jpg" data-caption="Copão de 430ml">
-          <img src="assets/img/galeria/copao-430ml-2.jpg" alt="Copão de sorvete Tropical de 430ml, vista lateral" loading="lazy">
+        <button type="button" class="galeria-item extra hidden" data-cat="picoles" data-src="assets/img/galeria/picole-crocante-branco.webp" data-caption="Picolé com cobertura crocante" style="--thumb:url('assets/img/galeria/thumb/picole-crocante-branco.webp')">
+          <img src="assets/img/galeria/thumb/picole-crocante-branco.webp" alt="Picolé com cobertura branca crocante" width="560" height="748" loading="lazy" decoding="async">
+          <span class="galeria-label">Picolé com cobertura crocante</span>
         </button>
-        <button type="button" class="galeria-item" data-src="assets/img/galeria/copao-430ml-3.jpg" data-caption="Copão de 430ml">
-          <img src="assets/img/galeria/copao-430ml-3.jpg" alt="Copão de sorvete Tropical de 430ml, vista de cima" loading="lazy">
+        <button type="button" class="galeria-item extra hidden" data-cat="picoles" data-src="assets/img/galeria/picole-crocante-leite-condensado.webp" data-caption="Picolé Crocante sabor leite condensado" style="--thumb:url('assets/img/galeria/thumb/picole-crocante-leite-condensado.webp')">
+          <img src="assets/img/galeria/thumb/picole-crocante-leite-condensado.webp" alt="Picolé Crocante sabor leite condensado" width="496" height="1100" loading="lazy" decoding="async">
+          <span class="galeria-label">Picolé Crocante sabor leite condensado</span>
         </button>
-        <button type="button" class="galeria-item" data-src="assets/img/galeria/sorvete-1l-flocos-chocolate.jpg" data-caption="Sorvete de 1 litro sabor Flocos e Chocolate">
-          <img src="assets/img/galeria/sorvete-1l-flocos-chocolate.jpg" alt="Pote de sorvete Tropical de 1 litro sabor Flocos e Chocolate" loading="lazy">
+        <button type="button" class="galeria-item extra hidden" data-cat="picoles" data-src="assets/img/galeria/picole-crocante-flocos.webp" data-caption="Picolé Crocante sabor flocos" style="--thumb:url('assets/img/galeria/thumb/picole-crocante-flocos.webp')">
+          <img src="assets/img/galeria/thumb/picole-crocante-flocos.webp" alt="Picolé Crocante sabor flocos" width="518" height="1100" loading="lazy" decoding="async">
+          <span class="galeria-label">Picolé Crocante sabor flocos</span>
         </button>
-        <button type="button" class="galeria-item" data-src="assets/img/galeria/copao-430ml-morango.jpg" data-caption="Copão de 430ml sabor morango">
-          <img src="assets/img/galeria/copao-430ml-morango.jpg" alt="Copão de sorvete Tropical de 430ml, sabor morango" loading="lazy">
+        <button type="button" class="galeria-item extra hidden" data-cat="picoles" data-src="assets/img/galeria/picole-crocante-morango.webp" data-caption="Picolé Crocante sabor morango" style="--thumb:url('assets/img/galeria/thumb/picole-crocante-morango.webp')">
+          <img src="assets/img/galeria/thumb/picole-crocante-morango.webp" alt="Picolé Crocante sabor morango" width="390" height="1100" loading="lazy" decoding="async">
+          <span class="galeria-label">Picolé Crocante sabor morango</span>
         </button>
-        <button type="button" class="galeria-item" data-src="assets/img/galeria/sorvete-1l-napolitano.jpg" data-caption="Sorvete de 1 litro sabor Napolitano">
-          <img src="assets/img/galeria/sorvete-1l-napolitano.jpg" alt="Pote de sorvete Tropical de 1 litro sabor Napolitano" loading="lazy">
+        <button type="button" class="galeria-item extra hidden" data-cat="potes" data-src="assets/img/galeria/pote-240ml-2.webp" data-caption="Pote de sorvete de 240ml" style="--thumb:url('assets/img/galeria/thumb/pote-240ml-2.webp')">
+          <img src="assets/img/galeria/thumb/pote-240ml-2.webp" alt="Pote de sorvete Tropical de 240ml, vista lateral" width="560" height="591" loading="lazy" decoding="async">
+          <span class="galeria-label">Pote de sorvete de 240ml</span>
         </button>
-        <button type="button" class="galeria-item" data-src="assets/img/galeria/picoles-crocante-linha.jpg" data-caption="Linha de picolés Crocante">
-          <img src="assets/img/galeria/picoles-crocante-linha.jpg" alt="Linha de picolés Crocante nos sabores morango, flocos, chocolate e leite condensado" loading="lazy">
+        <button type="button" class="galeria-item extra hidden" data-cat="potes" data-src="assets/img/galeria/pote-240ml-3.webp" data-caption="Pote de sorvete de 240ml" style="--thumb:url('assets/img/galeria/thumb/pote-240ml-3.webp')">
+          <img src="assets/img/galeria/thumb/pote-240ml-3.webp" alt="Pote de sorvete Tropical de 240ml" width="560" height="437" loading="lazy" decoding="async">
+          <span class="galeria-label">Pote de sorvete de 240ml</span>
         </button>
-        <button type="button" class="galeria-item" data-src="assets/img/galeria/picole-crocante-chocolate.jpg" data-caption="Picolé Crocante sabor chocolate">
-          <img src="assets/img/galeria/picole-crocante-chocolate.jpg" alt="Picolé Crocante sabor chocolate" loading="lazy">
+        <button type="button" class="galeria-item extra hidden" data-cat="potes" data-src="assets/img/galeria/pote-240ml-4.webp" data-caption="Pote de sorvete de 240ml" style="--thumb:url('assets/img/galeria/thumb/pote-240ml-4.webp')">
+          <img src="assets/img/galeria/thumb/pote-240ml-4.webp" alt="Pote de sorvete Tropical de 240ml, sabor especial" width="560" height="581" loading="lazy" decoding="async">
+          <span class="galeria-label">Pote de sorvete de 240ml</span>
         </button>
-        <button type="button" class="galeria-item" data-src="assets/img/galeria/picole-crocante-leite-condensado.jpg" data-caption="Picolé Crocante sabor leite condensado">
-          <img src="assets/img/galeria/picole-crocante-leite-condensado.jpg" alt="Picolé Crocante sabor leite condensado" loading="lazy">
+        <button type="button" class="galeria-item extra hidden" data-cat="potes" data-src="assets/img/galeria/pote-240ml-5.webp" data-caption="Pote de sorvete de 240ml" style="--thumb:url('assets/img/galeria/thumb/pote-240ml-5.webp')">
+          <img src="assets/img/galeria/thumb/pote-240ml-5.webp" alt="Pote de sorvete Tropical de 240ml" width="560" height="423" loading="lazy" decoding="async">
+          <span class="galeria-label">Pote de sorvete de 240ml</span>
         </button>
-        <button type="button" class="galeria-item" data-src="assets/img/galeria/geladinhos-ice-bom.jpg" data-caption="Geladinhos Ice Bom, 40 unidades">
-          <img src="assets/img/galeria/geladinhos-ice-bom.jpg" alt="Pacote de geladinhos Ice Bom, 40 unidades" loading="lazy">
+        <button type="button" class="galeria-item extra hidden" data-cat="copao" data-src="assets/img/galeria/copao-430ml-2.webp" data-caption="Copão de 430ml" style="--thumb:url('assets/img/galeria/thumb/copao-430ml-2.webp')">
+          <img src="assets/img/galeria/thumb/copao-430ml-2.webp" alt="Copão de sorvete Tropical de 430ml, vista lateral" width="560" height="650" loading="lazy" decoding="async">
+          <span class="galeria-label">Copão de 430ml</span>
         </button>
-        <button type="button" class="galeria-item" data-src="assets/img/galeria/picole-crocante-flocos.jpg" data-caption="Picolé Crocante sabor flocos">
-          <img src="assets/img/galeria/picole-crocante-flocos.jpg" alt="Picolé Crocante sabor flocos" loading="lazy">
+        <button type="button" class="galeria-item extra hidden" data-cat="copao" data-src="assets/img/galeria/copao-430ml-3.webp" data-caption="Copão de 430ml" style="--thumb:url('assets/img/galeria/thumb/copao-430ml-3.webp')">
+          <img src="assets/img/galeria/thumb/copao-430ml-3.webp" alt="Copão de sorvete Tropical de 430ml, vista de cima" width="560" height="631" loading="lazy" decoding="async">
+          <span class="galeria-label">Copão de 430ml</span>
         </button>
-        <button type="button" class="galeria-item" data-src="assets/img/galeria/picole-crocante-morango.jpg" data-caption="Picolé Crocante sabor morango">
-          <img src="assets/img/galeria/picole-crocante-morango.jpg" alt="Picolé Crocante sabor morango" loading="lazy">
+        <button type="button" class="galeria-item extra hidden" data-cat="tropgurt" data-src="assets/img/galeria/tropgurt-pacote-2.webp" data-caption="Tropgurt, sorvete iogurte" style="--thumb:url('assets/img/galeria/thumb/tropgurt-pacote-2.webp')">
+          <img src="assets/img/galeria/thumb/tropgurt-pacote-2.webp" alt="Pacote de Tropgurt, sorvete iogurte, outro ângulo" width="560" height="437" loading="lazy" decoding="async">
+          <span class="galeria-label">Tropgurt, sorvete iogurte</span>
         </button>
       </div>
+      <p class="galeria-hint" id="galeriaHint">Mostrando 12 destaques de 24 fotos. Escolha uma linha de produto para ver todas, ou toque numa foto para navegar por todas elas.</p>
     </div>
   </section>
 
@@ -1688,7 +1891,7 @@
     </button>
     <figure class="lightbox-figure">
       <img src="" alt="" id="lightboxImg">
-      <figcaption id="lightboxCaption"></figcaption>
+      <figcaption><span id="lightboxCaption"></span><span class="lightbox-counter" id="lightboxCounter"></span></figcaption>
     </figure>
     <button type="button" class="lightbox-btn lightbox-next" id="lightboxNext" aria-label="Próxima foto">
       <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
@@ -1696,11 +1899,11 @@
   </div>
 
   <!-- REVENDA / COMÉRCIO -->
-  <section class="revenda" id="revenda" aria-labelledby="revenda-title">
+  <section class="revenda lazy-bg" id="revenda" aria-labelledby="revenda-title">
     <div class="container">
       <div class="revenda-box">
         <div class="revenda-img">
-          <img src="assets/img/produtos/caixa-10l.jpg" alt="Caixa de sorvete Tropical de 10 litros para revenda" loading="lazy">
+          <img src="assets/img/produtos/caixa-10l.webp" alt="Caixa de sorvete Tropical de 10 litros para revenda" loading="lazy">
         </div>
         <div class="revenda-content">
           <span class="section-tag">Para o seu comércio</span>
@@ -1726,7 +1929,7 @@
     <div class="container">
       <div class="vitrine-box">
         <div class="vitrine-img">
-          <img src="assets/img/produtos/sorvete-potes.jpg" alt="Catálogo de produtos Tropical Sorvetes na vitrine online" loading="lazy">
+          <img src="assets/img/vitrine.webp" alt="Catálogo de produtos Tropical Sorvetes na vitrine online" loading="lazy">
         </div>
         <div class="vitrine-content">
           <span class="section-tag">Confira agora</span>
@@ -1792,7 +1995,7 @@
   </section>
 
   <!-- CONTATO -->
-  <section class="contato" id="contato" aria-labelledby="contato-title">
+  <section class="contato lazy-bg" id="contato" aria-labelledby="contato-title">
     <div class="container">
       <div class="contato-grid">
         <div>
@@ -1910,7 +2113,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-logo">
-            <img src="logo.png" alt="Tropical Sorvetes — Logo" loading="lazy">
+            <img src="logo.webp" alt="Tropical Sorvetes — Logo" loading="lazy">
           </div>
           <p>Tropical Sorvetes — sorvetes, picolés e açaí de tradição há mais de 30 anos, direto de fábrica para famílias e revendedores do Vale do Acaraú e região, em Marco/CE.</p>
           <div class="footer-social">
@@ -2157,6 +2360,8 @@
       { sel: '.diff-card',           dir: 'up',   stagger: true },
       { sel: '.produto-card',        dir: 'up',   stagger: true },
       { sel: '.galeria-item',        dir: 'up',   stagger: true },
+      { sel: '.filtros',             dir: 'up' },
+      { sel: '.sabores-grid',        dir: 'up' },
       { sel: '.sabores-tags',        dir: 'scale' },
       { sel: '.revenda-box',         dir: 'scale' },
       { sel: '.vitrine-box',         dir: 'scale' },
@@ -2334,37 +2539,94 @@
       });
     });
 
-    // Galeria: lightbox
+    // Fundos de seção: carrega a imagem só quando a seção se aproxima da tela
     (function() {
-      const items = Array.from(document.querySelectorAll('.galeria-item'));
-      if (!items.length) return;
+      const secs = document.querySelectorAll('.lazy-bg');
+      if (!('IntersectionObserver' in window)) { secs.forEach(s => s.classList.remove('lazy-bg')); return; }
+      const bgObs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.remove('lazy-bg'); bgObs.unobserve(e.target); } });
+      }, { rootMargin: '600px 0px' });
+      secs.forEach(s => bgObs.observe(s));
+    })();
+
+    // Filtros (sabores e galeria). "todos" mostra tudo que não for foto extra;
+    // uma categoria mostra todas as fotos dela, inclusive as extras.
+    document.querySelectorAll('.filtros').forEach(group => {
+      const grid = document.getElementById(group.dataset.grid);
+      if (!grid) return;
+      const btns = group.querySelectorAll('.filtro');
+      const cards = grid.querySelectorAll('[data-cat]');
+      const hint = grid.id === 'galeriaGrid' ? document.getElementById('galeriaHint') : null;
+      grid.dataset.filter = 'todos';
+      btns.forEach(btn => btn.addEventListener('click', () => {
+        const f = btn.dataset.filter;
+        grid.dataset.filter = f;
+        btns.forEach(b => {
+          b.classList.toggle('active', b === btn);
+          b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+        });
+        cards.forEach(card => {
+          const show = f === 'todos' ? !card.classList.contains('extra') : card.dataset.cat === f;
+          card.classList.toggle('hidden', !show);
+          card.classList.remove('reveal');
+          if (show) { void card.offsetWidth; card.classList.add('reveal'); }
+        });
+        if (hint) hint.hidden = f !== 'todos';
+      }));
+    });
+
+    // Galeria e sabores: lightbox
+    (function() {
+      const all = Array.from(document.querySelectorAll('.galeria-item, .sabor-card'));
+      if (!all.length) return;
       const lightbox = document.getElementById('lightbox');
       const lbImg = document.getElementById('lightboxImg');
       const lbCaption = document.getElementById('lightboxCaption');
+      const lbCounter = document.getElementById('lightboxCounter');
       const btnClose = document.getElementById('lightboxClose');
       const btnPrev = document.getElementById('lightboxPrev');
       const btnNext = document.getElementById('lightboxNext');
-      let current = 0;
+      let items = all, current = 0, opener = null;
 
+      // Fotos do mesmo bloco, no filtro atual. Em "todos" a galeria inclui as fotos extras.
+      function listFor(item) {
+        const grid = item.closest('[id$="Grid"]');
+        const f = grid.dataset.filter || 'todos';
+        return Array.from(grid.querySelectorAll('[data-cat]')).filter(el => f === 'todos' || el.dataset.cat === f);
+      }
+      function preload(i) {
+        const it = items[(i + items.length) % items.length];
+        if (it) { const im = new Image(); im.src = it.dataset.src; }
+      }
       function show(i) {
         current = (i + items.length) % items.length;
         const item = items[current];
+        lbImg.classList.add('loading');
+        lbImg.onload = () => lbImg.classList.remove('loading');
         lbImg.src = item.dataset.src;
         lbImg.alt = item.querySelector('img').alt;
         lbCaption.textContent = item.dataset.caption || '';
+        lbCounter.textContent = (current + 1) + ' / ' + items.length;
+        const multi = items.length > 1;
+        btnPrev.hidden = btnNext.hidden = !multi;
+        if (multi) { preload(current + 1); preload(current - 1); }
       }
-      function open(i) {
-        show(i);
+      function open(item) {
+        opener = item;
+        items = listFor(item);
+        show(items.indexOf(item));
         lightbox.classList.add('open');
         lightbox.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
+        btnClose.focus();
       }
       function close() {
         lightbox.classList.remove('open');
         lightbox.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
+        if (opener) opener.focus();
       }
-      items.forEach((item, i) => item.addEventListener('click', () => open(i)));
+      all.forEach(item => item.addEventListener('click', () => open(item)));
       btnClose.addEventListener('click', close);
       btnPrev.addEventListener('click', () => show(current - 1));
       btnNext.addEventListener('click', () => show(current + 1));
@@ -2374,7 +2636,23 @@
         if (e.key === 'Escape') close();
         if (e.key === 'ArrowLeft') show(current - 1);
         if (e.key === 'ArrowRight') show(current + 1);
+        if (e.key === 'Tab') {
+          // Mantém o foco dentro da janela aberta
+          const f = Array.from(lightbox.querySelectorAll('button')).filter(b => !b.hidden);
+          const first = f[0], last = f[f.length - 1];
+          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+        }
       });
+      // Deslizar no celular
+      let x0 = null, y0 = 0;
+      lightbox.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, { passive: true });
+      lightbox.addEventListener('touchend', e => {
+        if (x0 === null) return;
+        const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+        x0 = null;
+        if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5 && items.length > 1) show(current + (dx < 0 ? 1 : -1));
+      }, { passive: true });
     })();
   </script>
 </body>
