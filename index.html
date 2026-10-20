@@ -590,15 +590,6 @@
       88%  { opacity: 0.22; }
       100% { transform: translate(var(--drift, 40px), -620px) rotate(30deg); opacity: 0; }
     }
-    .sabores-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 8px; }
-    .sabor-tag {
-      display: inline-flex; align-items: center;
-      background: var(--white); border: 1px solid var(--gray-200);
-      padding: 9px 17px; border-radius: 50px;
-      font-size: 0.83rem; font-weight: 600; color: var(--dark);
-      transition: border-color 0.22s ease, background 0.22s ease, transform 0.22s ease, color 0.22s ease;
-    }
-    .sabor-tag:hover { border-color: var(--orange); background: var(--orange); color: var(--white); transform: translateY(-2px); }
     .filtros { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 8px 0 28px; }
     .filtro {
       display: inline-flex; align-items: center; gap: 7px;
@@ -635,10 +626,6 @@
     .sabor-card.reveal { animation: saborIn 0.4s cubic-bezier(0.22,1,0.36,1) both; }
     @keyframes saborIn { from { opacity: 0; transform: translateY(12px) scale(0.97); } to { opacity: 1; transform: none; } }
 
-    .sabores-outros-title {
-      font-family: 'Baloo 2', sans-serif; font-size: 1.15rem; font-weight: 700;
-      color: var(--dark); text-align: center; margin: 44px 0 14px;
-    }
     @media (max-width: 1100px) { .sabores-grid { grid-template-columns: repeat(4, 1fr); } }
     @media (max-width: 860px)  { .sabores-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; } }
     @media (max-width: 560px)  {
@@ -1549,68 +1536,12 @@
       </div>
       <div class="filtros" role="group" aria-label="Filtrar sabores por categoria" data-grid="saboresGrid">
         <button type="button" class="filtro active" data-filter="todos" aria-pressed="true">Todos <span>40</span></button>
-        <button type="button" class="filtro" data-filter="classicos" aria-pressed="false">Clássicos <span>10</span></button>
-        <button type="button" class="filtro" data-filter="especiais" aria-pressed="false">Especiais <span>8</span></button>
         <button type="button" class="filtro" data-filter="naturais" aria-pressed="false">Naturais <span>10</span></button>
-        <button type="button" class="filtro" data-filter="chocolates" aria-pressed="false">Chocolates <span>2</span></button>
-        <button type="button" class="filtro" data-filter="bombons" aria-pressed="false">Bombons <span>5</span></button>
-        <button type="button" class="filtro" data-filter="kids" aria-pressed="false">Kids <span>5</span></button>
+        <button type="button" class="filtro" data-filter="classicos" aria-pressed="false">Clássicos <span>10</span></button>
+        <button type="button" class="filtro" data-filter="especiais" aria-pressed="false">Especiais e Chocolates <span>10</span></button>
+        <button type="button" class="filtro" data-filter="bombons" aria-pressed="false">Bombons e Kids <span>10</span></button>
       </div>
       <div class="sabores-grid" id="saboresGrid">
-        <button type="button" class="sabor-card" data-cat="classicos" data-src="assets/img/sabores/leite-condensado.webp" data-caption="Sorvete sabor Leite Condensado · Clássicos">
-          <img src="assets/img/sabores/thumb/leite-condensado.webp" alt="Sorvete Tropical sabor Leite Condensado" width="720" height="900" loading="lazy" decoding="async">
-        </button>
-        <button type="button" class="sabor-card" data-cat="classicos" data-src="assets/img/sabores/alfajor.webp" data-caption="Sorvete sabor Alfajor · Clássicos">
-          <img src="assets/img/sabores/thumb/alfajor.webp" alt="Sorvete Tropical sabor Alfajor" width="720" height="900" loading="lazy" decoding="async">
-        </button>
-        <button type="button" class="sabor-card" data-cat="classicos" data-src="assets/img/sabores/napolitano.webp" data-caption="Sorvete sabor Napolitano · Clássicos">
-          <img src="assets/img/sabores/thumb/napolitano.webp" alt="Sorvete Tropical sabor Napolitano" width="720" height="900" loading="lazy" decoding="async">
-        </button>
-        <button type="button" class="sabor-card" data-cat="classicos" data-src="assets/img/sabores/flocos.webp" data-caption="Sorvete sabor Flocos · Clássicos">
-          <img src="assets/img/sabores/thumb/flocos.webp" alt="Sorvete Tropical sabor Flocos" width="720" height="900" loading="lazy" decoding="async">
-        </button>
-        <button type="button" class="sabor-card" data-cat="classicos" data-src="assets/img/sabores/tapioca.webp" data-caption="Sorvete sabor Tapioca · Clássicos">
-          <img src="assets/img/sabores/thumb/tapioca.webp" alt="Sorvete Tropical sabor Tapioca" width="720" height="900" loading="lazy" decoding="async">
-        </button>
-        <button type="button" class="sabor-card" data-cat="classicos" data-src="assets/img/sabores/brigadeiro.webp" data-caption="Sorvete sabor Brigadeiro · Clássicos">
-          <img src="assets/img/sabores/thumb/brigadeiro.webp" alt="Sorvete Tropical sabor Brigadeiro" width="720" height="900" loading="lazy" decoding="async">
-        </button>
-        <button type="button" class="sabor-card" data-cat="classicos" data-src="assets/img/sabores/morango.webp" data-caption="Sorvete sabor Morango · Clássicos">
-          <img src="assets/img/sabores/thumb/morango.webp" alt="Sorvete Tropical sabor Morango" width="720" height="900" loading="lazy" decoding="async">
-        </button>
-        <button type="button" class="sabor-card" data-cat="classicos" data-src="assets/img/sabores/ninho-trufado.webp" data-caption="Sorvete sabor Ninho Trufado · Clássicos">
-          <img src="assets/img/sabores/thumb/ninho-trufado.webp" alt="Sorvete Tropical sabor Ninho Trufado" width="720" height="900" loading="lazy" decoding="async">
-        </button>
-        <button type="button" class="sabor-card" data-cat="classicos" data-src="assets/img/sabores/baunilha.webp" data-caption="Sorvete sabor Baunilha · Clássicos">
-          <img src="assets/img/sabores/thumb/baunilha.webp" alt="Sorvete Tropical sabor Baunilha" width="720" height="900" loading="lazy" decoding="async">
-        </button>
-        <button type="button" class="sabor-card" data-cat="classicos" data-src="assets/img/sabores/creme-com-passas.webp" data-caption="Sorvete sabor Creme com Passas · Clássicos">
-          <img src="assets/img/sabores/thumb/creme-com-passas.webp" alt="Sorvete Tropical sabor Creme com Passas" width="720" height="900" loading="lazy" decoding="async">
-        </button>
-        <button type="button" class="sabor-card" data-cat="especiais" data-src="assets/img/sabores/chokito.webp" data-caption="Sorvete sabor Chokito · Especiais">
-          <img src="assets/img/sabores/thumb/chokito.webp" alt="Sorvete Tropical sabor Chokito" width="720" height="900" loading="lazy" decoding="async">
-        </button>
-        <button type="button" class="sabor-card" data-cat="especiais" data-src="assets/img/sabores/marula.webp" data-caption="Sorvete sabor Marula · Especiais">
-          <img src="assets/img/sabores/thumb/marula.webp" alt="Sorvete Tropical sabor Marula" width="720" height="900" loading="lazy" decoding="async">
-        </button>
-        <button type="button" class="sabor-card" data-cat="especiais" data-src="assets/img/sabores/chocomenta.webp" data-caption="Sorvete sabor Chocomenta · Especiais">
-          <img src="assets/img/sabores/thumb/chocomenta.webp" alt="Sorvete Tropical sabor Chocomenta" width="720" height="900" loading="lazy" decoding="async">
-        </button>
-        <button type="button" class="sabor-card" data-cat="especiais" data-src="assets/img/sabores/pave.webp" data-caption="Sorvete sabor Pavê · Especiais">
-          <img src="assets/img/sabores/thumb/pave.webp" alt="Sorvete Tropical sabor Pavê" width="720" height="900" loading="lazy" decoding="async">
-        </button>
-        <button type="button" class="sabor-card" data-cat="especiais" data-src="assets/img/sabores/cappuccino.webp" data-caption="Sorvete sabor Cappuccino · Especiais">
-          <img src="assets/img/sabores/thumb/cappuccino.webp" alt="Sorvete Tropical sabor Cappuccino" width="720" height="900" loading="lazy" decoding="async">
-        </button>
-        <button type="button" class="sabor-card" data-cat="especiais" data-src="assets/img/sabores/pipoca-doce.webp" data-caption="Sorvete sabor Pipoca Doce · Especiais">
-          <img src="assets/img/sabores/thumb/pipoca-doce.webp" alt="Sorvete Tropical sabor Pipoca Doce" width="720" height="900" loading="lazy" decoding="async">
-        </button>
-        <button type="button" class="sabor-card" data-cat="especiais" data-src="assets/img/sabores/bosque-nevado.webp" data-caption="Sorvete sabor Bosque Nevado · Especiais">
-          <img src="assets/img/sabores/thumb/bosque-nevado.webp" alt="Sorvete Tropical sabor Bosque Nevado" width="720" height="900" loading="lazy" decoding="async">
-        </button>
-        <button type="button" class="sabor-card" data-cat="especiais" data-src="assets/img/sabores/sensacao.webp" data-caption="Sorvete sabor Sensação · Especiais">
-          <img src="assets/img/sabores/thumb/sensacao.webp" alt="Sorvete Tropical sabor Sensação" width="720" height="900" loading="lazy" decoding="async">
-        </button>
         <button type="button" class="sabor-card" data-cat="naturais" data-src="assets/img/sabores/graviola.webp" data-caption="Sorvete sabor Graviola · Naturais">
           <img src="assets/img/sabores/thumb/graviola.webp" alt="Sorvete Tropical sabor Graviola" width="720" height="900" loading="lazy" decoding="async">
         </button>
@@ -1641,57 +1572,96 @@
         <button type="button" class="sabor-card" data-cat="naturais" data-src="assets/img/sabores/mousse-de-maracuja.webp" data-caption="Sorvete sabor Mousse de Maracujá · Naturais">
           <img src="assets/img/sabores/thumb/mousse-de-maracuja.webp" alt="Sorvete Tropical sabor Mousse de Maracujá" width="720" height="900" loading="lazy" decoding="async">
         </button>
-        <button type="button" class="sabor-card" data-cat="chocolates" data-src="assets/img/sabores/diamante-negro.webp" data-caption="Sorvete sabor Diamante Negro · Chocolates">
+        <button type="button" class="sabor-card" data-cat="classicos" data-src="assets/img/sabores/leite-condensado.webp" data-caption="Sorvete sabor Leite Condensado · Clássicos">
+          <img src="assets/img/sabores/thumb/leite-condensado.webp" alt="Sorvete Tropical sabor Leite Condensado" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="classicos" data-src="assets/img/sabores/alfajor.webp" data-caption="Sorvete sabor Alfajor · Clássicos">
+          <img src="assets/img/sabores/thumb/alfajor.webp" alt="Sorvete Tropical sabor Alfajor" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="classicos" data-src="assets/img/sabores/napolitano.webp" data-caption="Sorvete sabor Napolitano · Clássicos">
+          <img src="assets/img/sabores/thumb/napolitano.webp" alt="Sorvete Tropical sabor Napolitano" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="classicos" data-src="assets/img/sabores/flocos.webp" data-caption="Sorvete sabor Flocos · Clássicos">
+          <img src="assets/img/sabores/thumb/flocos.webp" alt="Sorvete Tropical sabor Flocos" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="classicos" data-src="assets/img/sabores/tapioca.webp" data-caption="Sorvete sabor Tapioca · Clássicos">
+          <img src="assets/img/sabores/thumb/tapioca.webp" alt="Sorvete Tropical sabor Tapioca" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="classicos" data-src="assets/img/sabores/brigadeiro.webp" data-caption="Sorvete sabor Brigadeiro · Clássicos">
+          <img src="assets/img/sabores/thumb/brigadeiro.webp" alt="Sorvete Tropical sabor Brigadeiro" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="classicos" data-src="assets/img/sabores/morango.webp" data-caption="Sorvete sabor Morango · Clássicos">
+          <img src="assets/img/sabores/thumb/morango.webp" alt="Sorvete Tropical sabor Morango" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="classicos" data-src="assets/img/sabores/ninho-trufado.webp" data-caption="Sorvete sabor Ninho Trufado · Clássicos">
+          <img src="assets/img/sabores/thumb/ninho-trufado.webp" alt="Sorvete Tropical sabor Ninho Trufado" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="classicos" data-src="assets/img/sabores/baunilha.webp" data-caption="Sorvete sabor Baunilha · Clássicos">
+          <img src="assets/img/sabores/thumb/baunilha.webp" alt="Sorvete Tropical sabor Baunilha" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="classicos" data-src="assets/img/sabores/creme-com-passas.webp" data-caption="Sorvete sabor Creme com Passas · Clássicos">
+          <img src="assets/img/sabores/thumb/creme-com-passas.webp" alt="Sorvete Tropical sabor Creme com Passas" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="especiais" data-src="assets/img/sabores/chokito.webp" data-caption="Sorvete sabor Chokito · Especiais e Chocolates">
+          <img src="assets/img/sabores/thumb/chokito.webp" alt="Sorvete Tropical sabor Chokito" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="especiais" data-src="assets/img/sabores/marula.webp" data-caption="Sorvete sabor Marula · Especiais e Chocolates">
+          <img src="assets/img/sabores/thumb/marula.webp" alt="Sorvete Tropical sabor Marula" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="especiais" data-src="assets/img/sabores/chocomenta.webp" data-caption="Sorvete sabor Chocomenta · Especiais e Chocolates">
+          <img src="assets/img/sabores/thumb/chocomenta.webp" alt="Sorvete Tropical sabor Chocomenta" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="especiais" data-src="assets/img/sabores/pave.webp" data-caption="Sorvete sabor Pavê · Especiais e Chocolates">
+          <img src="assets/img/sabores/thumb/pave.webp" alt="Sorvete Tropical sabor Pavê" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="especiais" data-src="assets/img/sabores/cappuccino.webp" data-caption="Sorvete sabor Cappuccino · Especiais e Chocolates">
+          <img src="assets/img/sabores/thumb/cappuccino.webp" alt="Sorvete Tropical sabor Cappuccino" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="especiais" data-src="assets/img/sabores/pipoca-doce.webp" data-caption="Sorvete sabor Pipoca Doce · Especiais e Chocolates">
+          <img src="assets/img/sabores/thumb/pipoca-doce.webp" alt="Sorvete Tropical sabor Pipoca Doce" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="especiais" data-src="assets/img/sabores/bosque-nevado.webp" data-caption="Sorvete sabor Bosque Nevado · Especiais e Chocolates">
+          <img src="assets/img/sabores/thumb/bosque-nevado.webp" alt="Sorvete Tropical sabor Bosque Nevado" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="especiais" data-src="assets/img/sabores/sensacao.webp" data-caption="Sorvete sabor Sensação · Especiais e Chocolates">
+          <img src="assets/img/sabores/thumb/sensacao.webp" alt="Sorvete Tropical sabor Sensação" width="720" height="900" loading="lazy" decoding="async">
+        </button>
+        <button type="button" class="sabor-card" data-cat="especiais" data-src="assets/img/sabores/diamante-negro.webp" data-caption="Sorvete sabor Diamante Negro · Especiais e Chocolates">
           <img src="assets/img/sabores/thumb/diamante-negro.webp" alt="Sorvete Tropical sabor Diamante Negro" width="720" height="900" loading="lazy" decoding="async">
         </button>
-        <button type="button" class="sabor-card" data-cat="chocolates" data-src="assets/img/sabores/floresta-negra.webp" data-caption="Sorvete sabor Floresta Negra · Chocolates">
+        <button type="button" class="sabor-card" data-cat="especiais" data-src="assets/img/sabores/floresta-negra.webp" data-caption="Sorvete sabor Floresta Negra · Especiais e Chocolates">
           <img src="assets/img/sabores/thumb/floresta-negra.webp" alt="Sorvete Tropical sabor Floresta Negra" width="720" height="900" loading="lazy" decoding="async">
         </button>
-        <button type="button" class="sabor-card" data-cat="bombons" data-src="assets/img/sabores/serenata-de-amor.webp" data-caption="Sorvete sabor Serenata de Amor · Bombons">
+        <button type="button" class="sabor-card" data-cat="bombons" data-src="assets/img/sabores/serenata-de-amor.webp" data-caption="Sorvete sabor Serenata de Amor · Bombons e Kids">
           <img src="assets/img/sabores/thumb/serenata-de-amor.webp" alt="Sorvete Tropical sabor Serenata de Amor" width="720" height="900" loading="lazy" decoding="async">
         </button>
-        <button type="button" class="sabor-card" data-cat="bombons" data-src="assets/img/sabores/prestigio.webp" data-caption="Sorvete sabor Prestígio · Bombons">
+        <button type="button" class="sabor-card" data-cat="bombons" data-src="assets/img/sabores/prestigio.webp" data-caption="Sorvete sabor Prestígio · Bombons e Kids">
           <img src="assets/img/sabores/thumb/prestigio.webp" alt="Sorvete Tropical sabor Prestígio" width="720" height="900" loading="lazy" decoding="async">
         </button>
-        <button type="button" class="sabor-card" data-cat="bombons" data-src="assets/img/sabores/ouro-branco.webp" data-caption="Sorvete sabor Ouro Branco · Bombons">
+        <button type="button" class="sabor-card" data-cat="bombons" data-src="assets/img/sabores/ouro-branco.webp" data-caption="Sorvete sabor Ouro Branco · Bombons e Kids">
           <img src="assets/img/sabores/thumb/ouro-branco.webp" alt="Sorvete Tropical sabor Ouro Branco" width="720" height="900" loading="lazy" decoding="async">
         </button>
-        <button type="button" class="sabor-card" data-cat="bombons" data-src="assets/img/sabores/oreo.webp" data-caption="Sorvete sabor Oreo · Bombons">
+        <button type="button" class="sabor-card" data-cat="bombons" data-src="assets/img/sabores/oreo.webp" data-caption="Sorvete sabor Oreo · Bombons e Kids">
           <img src="assets/img/sabores/thumb/oreo.webp" alt="Sorvete Tropical sabor Oreo" width="720" height="900" loading="lazy" decoding="async">
         </button>
-        <button type="button" class="sabor-card" data-cat="bombons" data-src="assets/img/sabores/bombom-castanha.webp" data-caption="Sorvete sabor Bombom Castanha · Bombons">
+        <button type="button" class="sabor-card" data-cat="bombons" data-src="assets/img/sabores/bombom-castanha.webp" data-caption="Sorvete sabor Bombom Castanha · Bombons e Kids">
           <img src="assets/img/sabores/thumb/bombom-castanha.webp" alt="Sorvete Tropical sabor Bombom Castanha" width="720" height="900" loading="lazy" decoding="async">
         </button>
-        <button type="button" class="sabor-card" data-cat="kids" data-src="assets/img/sabores/uva.webp" data-caption="Sorvete sabor Uva · Kids">
+        <button type="button" class="sabor-card" data-cat="bombons" data-src="assets/img/sabores/uva.webp" data-caption="Sorvete sabor Uva · Bombons e Kids">
           <img src="assets/img/sabores/thumb/uva.webp" alt="Sorvete Tropical sabor Uva" width="720" height="900" loading="lazy" decoding="async">
         </button>
-        <button type="button" class="sabor-card" data-cat="kids" data-src="assets/img/sabores/iogurte.webp" data-caption="Sorvete sabor Iogurte · Kids">
+        <button type="button" class="sabor-card" data-cat="bombons" data-src="assets/img/sabores/iogurte.webp" data-caption="Sorvete sabor Iogurte · Bombons e Kids">
           <img src="assets/img/sabores/thumb/iogurte.webp" alt="Sorvete Tropical sabor Iogurte" width="720" height="900" loading="lazy" decoding="async">
         </button>
-        <button type="button" class="sabor-card" data-cat="kids" data-src="assets/img/sabores/algodao-doce.webp" data-caption="Sorvete sabor Algodão Doce · Kids">
+        <button type="button" class="sabor-card" data-cat="bombons" data-src="assets/img/sabores/algodao-doce.webp" data-caption="Sorvete sabor Algodão Doce · Bombons e Kids">
           <img src="assets/img/sabores/thumb/algodao-doce.webp" alt="Sorvete Tropical sabor Algodão Doce" width="720" height="900" loading="lazy" decoding="async">
         </button>
-        <button type="button" class="sabor-card" data-cat="kids" data-src="assets/img/sabores/ceu-azul.webp" data-caption="Sorvete sabor Céu Azul · Kids">
+        <button type="button" class="sabor-card" data-cat="bombons" data-src="assets/img/sabores/ceu-azul.webp" data-caption="Sorvete sabor Céu Azul · Bombons e Kids">
           <img src="assets/img/sabores/thumb/ceu-azul.webp" alt="Sorvete Tropical sabor Céu Azul" width="720" height="900" loading="lazy" decoding="async">
         </button>
-        <button type="button" class="sabor-card" data-cat="kids" data-src="assets/img/sabores/chiclete.webp" data-caption="Sorvete sabor Chiclete · Kids">
+        <button type="button" class="sabor-card" data-cat="bombons" data-src="assets/img/sabores/chiclete.webp" data-caption="Sorvete sabor Chiclete · Bombons e Kids">
           <img src="assets/img/sabores/thumb/chiclete.webp" alt="Sorvete Tropical sabor Chiclete" width="720" height="900" loading="lazy" decoding="async">
         </button>
-      </div>
-      <h3 class="sabores-outros-title">E tem mais: outros sabores do nosso buffet</h3>
-      <div class="sabores-tags">
-        <span class="sabor-tag">Açaí ao ninho</span>
-        <span class="sabor-tag">Banana</span>
-        <span class="sabor-tag">Bombom crocante</span>
-        <span class="sabor-tag">Coco queimado</span>
-        <span class="sabor-tag">Cookies</span>
-        <span class="sabor-tag">Doce de leite</span>
-        <span class="sabor-tag">Leitinho</span>
-        <span class="sabor-tag">Milho verde</span>
-        <span class="sabor-tag">Nega maluca</span>
-        <span class="sabor-tag">Pistache</span>
-        <span class="sabor-tag">Sonho de valsa</span>
-        <span class="sabor-tag">Unicórnio</span>
       </div>
       <p class="sabores-note">Não achou seu favorito? <strong>Chama a gente no WhatsApp</strong> e confira o sabor da semana.</p>
     </div>
@@ -2177,7 +2147,6 @@
       { sel: '.galeria-item',        dir: 'up',   stagger: true },
       { sel: '.filtros',             dir: 'up' },
       { sel: '.sabores-grid',        dir: 'up' },
-      { sel: '.sabores-tags',        dir: 'scale' },
       { sel: '.revenda-box',         dir: 'scale' },
       { sel: '.vitrine-box',         dir: 'scale' },
       { sel: '.depo-card',           dir: 'up',   stagger: true },
