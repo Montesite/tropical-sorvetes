@@ -368,12 +368,11 @@
     .sobre { background: var(--gray-50); }
     .sobre-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
 
-    .sobre-img-wrap { position: relative; border-radius: 20px; overflow: hidden; background: var(--gray-100); }
-    .sobre-img-wrap img { width: 100%; height: 480px; object-fit: cover; display: block; transform: scale(1); transition: transform 0.2s linear; will-change: transform; }
+    .sobre-img-wrap { position: relative; border-radius: 20px; overflow: hidden; background: var(--gray-100); max-width: 491px; width: 100%; justify-self: center; }
+    .sobre-img-wrap img { width: 100%; height: auto; aspect-ratio: 491 / 602; object-fit: cover; display: block; transform: scale(1); transition: transform 0.2s linear; will-change: transform; }
     .sobre-img-overlay {
-      position: absolute; bottom: 0; left: 0; right: 0;
-      background: linear-gradient(to top, rgba(36,20,10,0.90), transparent);
-      padding: 28px; display: flex; align-items: flex-end;
+      position: absolute; top: 0; left: 0; right: 0;
+      padding: 28px; display: flex; justify-content: flex-end; align-items: flex-start;
     }
     .sobre-badge {
       background: var(--gold); color: var(--dark);
@@ -542,19 +541,16 @@
     .produto-card:hover { background: rgba(255,255,255,0.11); transform: translateY(-4px); border-color: rgba(255,157,77,0.55); }
     .produto-card:hover::after { animation: shimmer 0.55s ease forwards; }
 
-    .produto-img-wrap { position: relative; width: 100%; height: 190px; overflow: hidden; }
+    .produto-img-wrap { position: relative; width: 100%; height: 240px; overflow: hidden; padding: 16px 16px 0; }
     .produto-img-wrap img {
-      width: 100%; height: 100%; object-fit: cover; display: block;
+      width: 100%; height: 100%; object-fit: contain; display: block;
+      filter: drop-shadow(0 10px 18px rgba(0,0,0,0.35));
       transition: transform 0.6s cubic-bezier(0.22,1,0.36,1);
     }
     .produto-card:hover .produto-img-wrap img { transform: scale(1.08); }
-    .produto-img-wrap::after {
-      content: ''; position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(22,12,6,0.88) 0%, rgba(22,12,6,0.15) 65%, transparent 100%);
-    }
 
     .produto-icon {
-      position: absolute; left: 22px; top: 163px; z-index: 2;
+      position: absolute; left: 22px; top: 213px; z-index: 2;
       width: 50px; height: 50px; border-radius: 16px;
       background: var(--orange); display: flex; align-items: center;
       justify-content: center;
@@ -1109,8 +1105,6 @@
       .stat-num         { font-size: 1.8rem; }
       .stat-label       { font-size: 0.74rem; }
 
-      .sobre-img-wrap img { height: 300px; object-position: center 30%; }
-
       .numbers-grid     { grid-template-columns: 1fr 1fr; gap: 24px; }
       .number-val       { font-size: 2.2rem; }
 
@@ -1165,15 +1159,14 @@
       .stat-num         { font-size: 1.25rem; }
       .stat-label       { font-size: 0.68rem; max-width: 100px; }
 
-      .sobre-img-wrap img  { height: 220px; }
       .sobre-badge strong  { font-size: 1.6rem; }
 
       .number-val       { font-size: 1.9rem; }
       .number-label     { font-size: 0.78rem; }
       .numbers-grid     { gap: 16px; }
 
-      .produto-img-wrap { height: 150px; }
-      .produto-icon     { width: 44px; height: 44px; left: 18px; top: 128px; }
+      .produto-img-wrap { height: 190px; padding: 12px 12px 0; }
+      .produto-icon     { width: 44px; height: 44px; left: 18px; top: 168px; }
       .produto-card h3  { margin: 36px 18px 8px; }
       .produto-card p   { padding: 0 18px; }
 
@@ -1211,7 +1204,6 @@
       .numbers-grid     { gap: 12px; }
       .section-title    { font-size: 1.5rem; }
       .section-subtitle { font-size: 0.875rem; }
-      .sobre-img-wrap img { height: 200px; }
       .contato-form     { padding: 20px 14px; }
     }
 
@@ -1350,7 +1342,7 @@
     <div class="container">
       <div class="sobre-grid">
         <div class="sobre-img-wrap reveal-left">
-          <img src="assets/img/produtos/picole-cremoso.webp" alt="Linha de picolés cremosos coloridos da Tropical Sorvetes" loading="lazy">
+          <img src="assets/img/quem-somos.webp" alt="Sorvete de chocolate sendo servido na casquinha — A marca que revendedor pede: fábrica própria e entrega direta para quem revende na região" width="491" height="602" loading="lazy">
           <div class="sobre-img-overlay">
             <div class="sobre-badge">
               <strong>30+</strong>
@@ -1543,7 +1535,7 @@
 
         <div class="produto-card">
           <div class="produto-img-wrap">
-            <img src="assets/img/produtos/picole-variados.webp" alt="Linha de picolés Crocante Tropical Sorvetes nos sabores morango, flocos, chocolate e leite condensado" loading="lazy">
+            <img src="assets/img/produtos/np-picoles.webp" alt="Picolés Tropical Sorvetes: Crocante, Açaí, Tapioca e Moreninha Tapioca" loading="lazy">
           </div>
           <div class="produto-icon">
             <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
@@ -1554,7 +1546,7 @@
 
         <div class="produto-card">
           <div class="produto-img-wrap">
-            <img src="assets/img/produtos/sorvete-1l.webp" alt="Pote de sorvete Tropical de 1 litro sabor Flocos e Chocolate" loading="lazy">
+            <img src="assets/img/produtos/np-sorvete-pote.webp" alt="Potes de sorvete Tropical sabor Creme com Passas e Flocos" loading="lazy">
           </div>
           <div class="produto-icon">
             <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
@@ -1565,7 +1557,7 @@
 
         <div class="produto-card">
           <div class="produto-img-wrap">
-            <img src="assets/img/produtos/sorvete-potes.webp" alt="Copão de sorvete Tropical de 430ml, ideal para matar a vontade a qualquer hora" loading="lazy">
+            <img src="assets/img/produtos/np-copos-sundae.webp" alt="Copos, potinhos Kids e sundae da Tropical Sorvetes" loading="lazy">
           </div>
           <div class="produto-icon">
             <svg viewBox="0 0 24 24"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.73z"/><polyline points="3.29 7 12 12 20.71 7"/><line x1="12" y1="22" x2="12" y2="12"/></svg>
@@ -1576,7 +1568,7 @@
 
         <div class="produto-card">
           <div class="produto-img-wrap">
-            <img src="assets/img/produtos/acai.webp" alt="Caixa e potes de açaí Tropical Sorvetes" loading="lazy">
+            <img src="assets/img/produtos/np-acai.webp" alt="Caixa e pote de Açaí com Ninho da Tropical Sorvetes" loading="lazy">
           </div>
           <div class="produto-icon">
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
@@ -1587,7 +1579,7 @@
 
         <div class="produto-card">
           <div class="produto-img-wrap">
-            <img src="assets/img/produtos/geladinho-tropgurt.webp" alt="Pacote de Tropgurt, sorvete iogurte da Tropical Sorvetes com 50 unidades" loading="lazy">
+            <img src="assets/img/produtos/np-geladinho-tropgurt.webp" alt="Pacotes de geladinho Ice Bolin e Tropgurt, sorvete iogurte da Tropical Sorvetes" loading="lazy">
           </div>
           <div class="produto-icon">
             <svg viewBox="0 0 24 24"><path d="M9 2v6l-5 8a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-5-8V2"/><path d="M9 2h6"/><path d="M8 15h8"/></svg>
@@ -2461,7 +2453,7 @@
         const r = wrap.getBoundingClientRect();
         const vh = window.innerHeight;
         const progress = 1 - Math.min(Math.max((r.top + r.height / 2) / (vh + r.height), 0), 1);
-        img.style.transform = `scale(${1 + progress * 0.12})`;
+        img.style.transform = `scale(${1 + progress * 0.04})`;
       }
       window.addEventListener('scroll', update, { passive: true });
       window.addEventListener('resize', update, { passive: true });
